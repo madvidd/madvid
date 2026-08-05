@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.github.io/</loc>
+    <loc>https://madvidd.github.io/madvid/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/projects.html</loc>
+    <loc>https://madvidd.github.io/madvid/projects.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2026-08-05</lastmod>
   </url>
 </urlset>
