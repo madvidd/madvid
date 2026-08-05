@@ -28,7 +28,7 @@ body{
 }
 .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.7rem 1.2rem}
 .brand{display:flex;gap:0.8rem;align-items:center;text-decoration:none;color:inherit;flex:0 1 auto}
-.brand .avatar{width:42px;height:42px;border-radius:50%;background:var(--brand);box-shadow:var(--shadow);object-fit:cover;object-position:50% 28%}
+.brand .avatar{width:52px;height:67px;border-radius:12px;background:var(--brand);box-shadow:var(--shadow);object-fit:contain}
 .brand h1,.brand-name{font-size:1.1rem;margin:0;font-weight:800;line-height:1.25}
 .brand p{margin:0;font-size:0.78rem;color:var(--muted)}
 
@@ -139,6 +139,20 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--brand-strong);outli
 .project-section.callout{background:#eaf6ff;border-left:4px solid var(--brand-strong);padding:1.2rem 1.4rem;border-radius:0 var(--radius) var(--radius) 0;margin:1rem 0 1.5rem}
 .certificate-block img{display:block;width:min(100%,560px);height:auto;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #dfeffc}
 .related-work{margin-top:2rem;border-top:1px solid #dfeffc}
+
+.media-page{max-width:1000px;padding-top:2rem;padding-bottom:3rem}
+.media-page>header{max-width:760px;margin-bottom:2rem}
+.media-page>header h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.12;margin:0.35rem 0 0.8rem}
+.media-section{padding:1rem 0}
+.media-section h2{margin-bottom:0.75rem}
+.media-card{display:flex;flex-direction:column;gap:0.45rem}
+.media-card p{margin:0}
+.media-label{color:#075c9c;font-size:0.78rem;font-weight:800;letter-spacing:0.07em;text-transform:uppercase}
+.media-actions{display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:auto;padding-top:0.65rem}
+.media-actions a{font-weight:600}
+.media-preview{margin:0;max-width:560px}
+.media-preview img{display:block;width:100%;height:auto;border:1px solid #dfeffc;border-radius:var(--radius);box-shadow:var(--shadow)}
+.media-preview figcaption{margin-top:0.6rem;color:var(--muted);font-size:0.92rem}
 
 @media (max-width:700px){
   .project-detail{padding-top:0.8rem}

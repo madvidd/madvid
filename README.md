@@ -4,6 +4,7 @@ This repository contains the source for the official personal website of **Seyed
 
 - Website: [madvidd.github.io/madvid](https://madvidd.github.io/madvid/)
 - Projects: [Engineering and research case studies](https://madvidd.github.io/madvid/projects.html)
+- Media: [Credentials, certificates and public links](https://madvidd.github.io/madvid/media.html)
 - LinkedIn: [linkedin.com/in/madvid](https://www.linkedin.com/in/madvid)
 - GitHub: [github.com/madvidd](https://github.com/madvidd)
 
