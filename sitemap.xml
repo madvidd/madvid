@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://madvidd.github.io/madvid/</loc>
     <changefreq>monthly</changefreq>
@@ -15,8 +15,26 @@
   <url>
     <loc>https://madvidd.github.io/madvid/media.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <lastmod>2026-08-05</lastmod>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/IMechE_UAS_Challenge_2026_Certificate.jpg</image:loc><image:title>IMechE UAS Challenge 2026 certificate — Seyed Mohammad Salehi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-supervised-ml-certificate.jpg</image:loc><image:title>Supervised Machine Learning certificate — Seyed Mohammad Salehi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-advanced-learning-algorithms-certificate.jpg</image:loc><image:title>Advanced Learning Algorithms certificate — Seyed Mohammad Salehi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-unsupervised-learning-certificate.jpg</image:loc><image:title>Unsupervised Learning, Recommenders, Reinforcement Learning certificate — Seyed Mohammad Salehi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-ptx-cover.jpg</image:loc><image:title>Rhizo PTX experience media</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-ptx-logo.jpg</image:loc><image:title>Rhizo PTX logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/team-peryton-cover.jpg</image:loc><image:title>Team Peryton UAV engineering media</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/team-peryton-logo.jpg</image:loc><image:title>Team Peryton logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-students-union-cover.jpg</image:loc><image:title>Surrey Students' Union experience media</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-students-union-logo.jpg</image:loc><image:title>Surrey Students' Union logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-compsoc-cover.jpg</image:loc><image:title>Surrey CompSoc committee media</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-compsoc-logo.jpg</image:loc><image:title>Surrey CompSoc logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-ears-cover.jpg</image:loc><image:title>Surrey EARS electronics society media</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-ears-logo.jpg</image:loc><image:title>Surrey EARS logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-enterprise-hub-cover.jpg</image:loc><image:title>Surrey Enterprise Hub media</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-enterprise-hub-logo.jpg</image:loc><image:title>Surrey Enterprise Hub logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-cover.jpg</image:loc><image:title>halow Project volunteering media</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-logo.jpg</image:loc><image:title>halow Project logo</image:title></image:image>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/projects/human-motion-prediction.html</loc>
