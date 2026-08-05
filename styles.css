@@ -28,7 +28,7 @@ body{
 }
 .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.7rem 1.2rem}
 .brand{display:flex;gap:0.8rem;align-items:center;text-decoration:none;color:inherit;flex:0 1 auto}
-.brand .avatar{width:42px;height:42px;border-radius:50%;background:var(--brand);box-shadow:var(--shadow)}
+.brand .avatar{width:42px;height:42px;border-radius:50%;background:var(--brand);box-shadow:var(--shadow);object-fit:cover;object-position:50% 28%}
 .brand h1,.brand-name{font-size:1.1rem;margin:0;font-weight:800;line-height:1.25}
 .brand p{margin:0;font-size:0.78rem;color:var(--muted)}
 
