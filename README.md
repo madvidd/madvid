@@ -1,6 +1,6 @@
 # Seyed Mohammad Salehi — Engineering and Research Portfolio
 
-This repository contains the source for the official personal website of **Seyed Mohammad Salehi**, an electrical engineer and University of Surrey M.Sc. researcher working across computer vision, robotics, machine learning, control and embedded systems.
+This repository contains the source for the official personal website of **Seyed Mohammad Salehi**, an electrical engineer and University of Surrey M.Sc. graduate working across computer vision, robotics, machine learning, control and embedded systems.
 
 - Website: [madvidd.github.io/madvid](https://madvidd.github.io/madvid/)
 - Projects: [Engineering and research case studies](https://madvidd.github.io/madvid/projects.html)
