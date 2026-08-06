@@ -176,6 +176,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--brand-strong);outli
 .section-heading{margin-bottom:1rem;max-width:82ch}
 .section-heading h2{margin:0.25rem 0 0.35rem}
 .section-heading p:last-child{margin:0;color:var(--muted)}
+.profile-fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem}
+.profile-fact-card h3{margin:0.2rem 0 0.75rem}
+.profile-fact-list{display:grid;gap:0.7rem;margin:0}
+.profile-fact-list div{border-top:1px solid #dfeffc;padding-top:0.65rem}
+.profile-fact-list dt{font-weight:800}
+.profile-fact-list dd{color:var(--muted);margin:0.15rem 0 0}
+.score-entry{border-top:1px solid #dfeffc;padding-top:0.65rem;margin-top:0.65rem}
+.score-entry p{color:var(--muted);margin:0.25rem 0 0}
 .certificate-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem;align-items:start}
 .media-figure{margin:0;background:var(--surface);border:1px solid #dfeffc;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;min-width:0}
 .media-figure>a{display:flex;align-items:center;justify-content:center;background:#f2f7fb;padding:0.75rem;min-height:250px}
@@ -206,7 +214,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--brand-strong);outli
 .status-note p{margin:0.2rem 0 0;color:var(--muted)}
 
 @media (max-width:700px){
-  .certificate-gallery,.experience-media-grid{grid-template-columns:minmax(0,1fr)}
+  .profile-fact-grid,.certificate-gallery,.experience-media-grid{grid-template-columns:minmax(0,1fr)}
   .media-figure>a{min-height:0}
   .credential-summary{align-items:flex-start;flex-direction:column}
 }
