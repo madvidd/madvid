@@ -29,6 +29,8 @@ Education contains qualifications, publications and certificates, with courses a
 
 The Media page is a directory for certificates, experience media, galleries, documents, posts and public links. Music has a dedicated `media/music.html` page for DJ performances, production, listening platforms and the electronic-music certificate. Explicit legacy fragment redirects preserve saved links to moved homepage sections, former single-page media sections, and the music certificate.
 
+The Music page hosts the three DJ performance clips and the Subtronics event reel as native, inline MP4 players, with preview images and no autoplay. The fourth item in the DJ carousel is an event poster, retained as an uncropped photograph. Original Instagram captions and links remain beside the media. Video files use H.264 with the original AAC audio and fast-start metadata; source mapping is recorded in `assets/music/SOURCES.md`.
+
 The media collection retains credential records, full-resolution image galleries, public links and attributed reposts from the owner's LinkedIn profile. Existing image redactions are preserved. Third-party posts remain attributed to their original authors; the IGNITE video uses LinkedIn's official embed with an original-post fallback link. Keep source images uncropped and all gallery items visible without opening a disclosure.
 
 Course grades are presented out of 100 and distinguish MSc module marks from coursework marks.

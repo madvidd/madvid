@@ -453,18 +453,18 @@ main > .section + .section { border-top: 1px solid var(--line); }
 .music-feature-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: start; gap: 2rem; }
 .music-feature-grid > * { min-width: 0; }
 .music-feature-grid h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-top: 0; }
-.music-page .instagram-embed { position: relative; width: 100%; min-width: 0; max-width: 100%; overflow: hidden; contain: inline-size; border-radius: 16px; background: #fff; }
-/* Instagram adds inline sizing after replacing its blockquote. Constrain that
-   replacement independently so it cannot enlarge the grid or the viewport. */
-.music-page .instagram-embed .instagram-media,
-.music-page .instagram-embed iframe,
-.music-page .instagram-embed iframe.instagram-media { display: block; box-sizing: border-box !important; width: 100% !important; min-width: 0 !important; max-width: 100% !important; margin: 0 !important; }
-.music-page .instagram-embed iframe { position: static !important; inset: auto !important; float: none !important; border: 0; }
-.music-page .instagram-embed iframe:not([src]),
-.music-page .instagram-embed iframe[src=""],
-.music-page .instagram-embed iframe[src="about:blank"] { display: none !important; }
-.instagram-fallback { margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); line-height: 1.7; overflow-wrap: anywhere; }
-.instagram-fallback a { display: inline-block; margin-top: .4rem; font-weight: 600; }
+.music-video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
+.music-page .music-video-card { min-width: 0; margin: 0; padding: 1rem; }
+.music-page .music-video-card:is(:hover, :focus-within) { transform: none; }
+.music-video, .music-event-poster img { display: block; width: 100%; max-width: 100%; height: auto; object-fit: contain; border-radius: 10px; }
+.music-video { max-height: min(75vh, 720px); background: var(--ink); }
+.music-video:focus-visible { outline: 3px solid var(--brand-strong); outline-offset: 4px; }
+.music-video-card figcaption { padding: 1rem .25rem .1rem; }
+.music-video-card figcaption h3 { margin: .5rem 0 .7rem; font-size: 1.05rem; }
+.music-video-links { display: flex; flex-wrap: wrap; gap: .45rem 1rem; margin: 0; font-size: .79rem !important; line-height: 1.7; }
+.music-video-links a { overflow-wrap: anywhere; }
+@media (max-width: 960px) { .music-video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .music-video-grid { grid-template-columns: minmax(0, 1fr); } }
 .music-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
 .music-post { margin: 0; min-width: 0; }
 .music-post img { display: block; width: 100%; height: auto; object-fit: contain; }

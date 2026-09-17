@@ -49,6 +49,16 @@ for (const [file, html] of pages) {
   for (const image of html.matchAll(/<img\b[^>]*>/g)) {
     if (!/\balt="[^"]+"/.test(image[0])) errors.push(`${file}: image without descriptive alt text`);
   }
+  for (const video of html.matchAll(/<video\b([^>]*)>([\s\S]*?)<\/video>/g)) {
+    const attributes = video[1];
+    if (!/\bcontrols(?:\s|=|$)/.test(attributes)) errors.push(`${file}: video without playback controls`);
+    if (!/\bplaysinline(?:\s|=|$)/.test(attributes)) errors.push(`${file}: video missing inline mobile playback`);
+    if (/\bautoplay(?:\s|=|$)/.test(attributes)) errors.push(`${file}: unexpected video autoplay`);
+    if (!/\bpreload="(?:none|metadata)"/.test(attributes)) errors.push(`${file}: video should not preload its entire file`);
+    if (!/\baria-label="[^"]+"/.test(attributes)) errors.push(`${file}: video without an accessible label`);
+    if (!/\bposter="[^"]+"/.test(attributes)) errors.push(`${file}: video without a poster`);
+    if (!/\bsrc="[^"]+"/.test(attributes + video[2])) errors.push(`${file}: video without a media source`);
+  }
 }
 
 for (const [file, html] of active) {
@@ -57,7 +67,7 @@ for (const [file, html] of active) {
   const canonical = html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
   if (canonical !== canonicalFor(file)) errors.push(`${file}: unexpected canonical ${canonical}`);
   if (!html.includes('nav-more-menu')) errors.push(`${file}: shared navigation missing`);
-  if (!/script\.js\?v=20260917-final-results/.test(html)) errors.push(`${file}: shared script version missing`);
+  if (!/script\.js\?v=20260917-native-music/.test(html)) errors.push(`${file}: shared script version missing`);
 }
 
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
