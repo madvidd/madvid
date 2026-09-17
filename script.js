@@ -38,7 +38,7 @@
     // No canvas loop, network request, flashing, or pointer tracking is needed.
     const ambientThemes = {
       home: '<path d="M-40 410C130 130 260 600 500 235S900 175 1120-30M-45 455C170 170 280 650 550 285S950 200 1130 15M-50 500C210 210 310 700 600 335S1000 225 1140 60M-55 545C250 250 340 750 650 385S1050 250 1150 105"/><ellipse cx="790" cy="250" rx="265" ry="150" transform="rotate(-30 790 250)"/>',
-      research: '<path d="M-50 620C110 590 210 150 440 250S700 530 1070 85M-40 665C180 620 240 205 440 300S770 570 1085 150M-30 710C230 640 275 260 440 350S840 610 1100 215M80 90L80 720M-10 640L1120 640"/><circle cx="440" cy="250" r="10"/><circle cx="680" cy="358" r="7"/><circle cx="845" cy="300" r="7"/><circle cx="265" cy="318" r="6"/>',
+      research: '<path d="M190 510C245 180 560 95 875 230C715 200 525 275 410 455C340 565 240 590 190 510Z" fill="currentColor" fill-opacity=".12"/><ellipse cx="550" cy="370" rx="355" ry="205" transform="rotate(-36 550 370)"/><ellipse cx="550" cy="370" rx="300" ry="154" transform="rotate(-36 550 370)"/><ellipse cx="550" cy="370" rx="355" ry="108" transform="rotate(38 550 370)"/><path d="M125 610C285 590 305 230 540 305S790 600 990 125M140 665C300 635 335 290 555 350S820 640 1020 200M270 135C365 295 610 485 855 545"/><circle cx="550" cy="370" r="52"/><circle cx="550" cy="370" r="15" fill="currentColor" fill-opacity=".35"/><circle cx="300" cy="225" r="11" fill="currentColor"/><circle cx="850" cy="485" r="10" fill="currentColor"/><circle cx="695" cy="145" r="8" fill="currentColor"/>',
       projects: '<path d="M180 210L450 65 750 230 470 395ZM180 210V490L470 670 750 510V230M470 395V670M450 65V330M110 400H30V555H180M750 395H875V205H1010"/><path d="M340 305L570 180M340 585L625 435M875 500H1010V365"/><circle cx="30" cy="555" r="10"/><circle cx="1010" cy="205" r="10"/><circle cx="1010" cy="365" r="10"/>',
       media: '<path d="M140 250L340 125 620 230 850 95M140 250L290 490 620 230 800 500 1000 340M290 490L500 645 800 500M340 125L420 380 1000 340"/><circle cx="140" cy="250" r="13"/><circle cx="340" cy="125" r="10"/><circle cx="620" cy="230" r="18"/><circle cx="850" cy="95" r="8"/><circle cx="290" cy="490" r="13"/><circle cx="800" cy="500" r="13"/><circle cx="1000" cy="340" r="9"/><circle cx="500" cy="645" r="8"/>',
       contact: '<circle cx="620" cy="380" r="95"/><circle cx="620" cy="380" r="175"/><circle cx="620" cy="380" r="255"/><circle cx="620" cy="380" r="335"/><path d="M35 485Q400 135 750 485T1200 485M35 550Q400 200 750 550T1200 550"/>',
@@ -65,33 +65,88 @@
     scene.setAttribute('aria-hidden', 'true');
     scene.setAttribute('inert', '');
     scene.dataset.theme = ambientTheme;
-    const svgOpen = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">';
-    const artLayers = [ambientThemes[ambientTheme], ambientThemes[ambientTheme], '<ellipse cx="550" cy="380" rx="350" ry="235"/><ellipse cx="550" cy="380" rx="285" ry="170"/><path d="M100 380H210M890 380H1000M550 45V125M550 635V715"/>'];
+    const motionProfiles = {
+      home: { name: 'ambient-home-tide', duration: 38 },
+      research: { name: 'ambient-research-orbit', duration: 36 },
+      projects: { name: 'ambient-projects-tilt', duration: 44 },
+      media: { name: 'ambient-media-constellation', duration: 41 },
+      contact: { name: 'ambient-contact-breathe', duration: 34 },
+      profile: { name: 'ambient-profile-contour', duration: 46 },
+      certificates: { name: 'ambient-certificates-sway', duration: 40 },
+      courses: { name: 'ambient-courses-rise', duration: 37 },
+      experience: { name: 'ambient-experience-traverse', duration: 43 },
+      gallery: { name: 'ambient-gallery-mobile', duration: 39 },
+      documents: { name: 'ambient-documents-hover', duration: 42 },
+      posts: { name: 'ambient-posts-wave', duration: 32 },
+      links: { name: 'ambient-links-revolve', duration: 52 }
+    };
+    const caseMotionProfiles = {
+      'rhizo-ptx-control-dashboard.html': { name: 'ambient-rhizo-regulate', duration: 45 },
+      'imeche-uas-challenge-2026.html': { name: 'ambient-uas-glide', duration: 48 },
+      'battery-soc-soh-estimation.html': { name: 'ambient-battery-cycle', duration: 44 }
+    };
+    const caseArt = {
+      'rhizo-ptx-control-dashboard.html': '<rect x="230" y="180" width="620" height="390" rx="28"/><circle cx="420" cy="375" r="95"/><path d="M420 375L470 315M585 285H755M585 365H755M585 445H700M230 290H115V105M230 470H95V650M850 285H1010V155M850 470H1030V625"/><circle cx="115" cy="105" r="12"/><circle cx="95" cy="650" r="12"/><circle cx="1010" cy="155" r="12"/><circle cx="1030" cy="625" r="12"/>',
+      'imeche-uas-challenge-2026.html': '<path d="M550 90L585 320 965 470 955 520 590 420 575 610 670 665 665 695 550 670 435 695 430 665 525 610 510 420 145 520 135 470 515 320Z"/><path d="M550 165V635M310 460L500 385M600 385L790 460"/><ellipse cx="550" cy="390" rx="425" ry="255" stroke-dasharray="12 20"/>',
+      'battery-soc-soh-estimation.html': '<rect x="180" y="245" width="675" height="300" rx="35"/><path d="M855 330H920V460H855M285 315V475M425 315V475M565 315V475M705 315V475M180 175C415 10 785 105 960 290M130 540C305 730 755 740 920 565M850 240L960 290 975 175M235 545L130 540 125 655"/>'
+    };
+    const motionProfile = (isCaseStudy && caseMotionProfiles[fileName]) || motionProfiles[ambientTheme];
+    scene.dataset.profile = motionProfile.name;
+    const svgOpen = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">';
+    const mainArt = (isCaseStudy && caseArt[fileName]) || ambientThemes[ambientTheme];
+    const artLayers = [mainArt, mainArt, '<ellipse cx="550" cy="380" rx="350" ry="235"/><ellipse cx="550" cy="380" rx="285" ry="170"/><path d="M100 380H210M890 380H1000M550 45V125M550 635V715"/>'];
     artLayers.forEach((geometry, index) => {
       const layer = document.createElement('div');
       layer.className = `ambient-layer ambient-layer-${index + 1}`;
       layer.style.setProperty('--art-angle', `${(pageSeed % 19) - 9 + (index === 1 ? 95 : 0)}deg`);
-      layer.style.setProperty('--art-duration', `${68 + (pageSeed % 25) + index * 17}s`);
+      layer.style.setProperty('--art-motion', motionProfile.name);
+      layer.style.setProperty('--art-duration', `${motionProfile.duration + index * 9 + (isCaseStudy ? pageSeed % 11 : 0)}s`);
+      layer.style.setProperty('--art-direction', index === 1 ? 'reverse' : 'normal');
       layer.style.setProperty('--art-delay', `${-((pageSeed % 41) + index * 13)}s`);
       layer.innerHTML = svgOpen + geometry + '</svg>';
       scene.append(layer);
     });
     document.body.prepend(scene);
-    let backgroundPaused = false;
-    try { backgroundPaused = localStorage.getItem('madvid-background-paused') === 'true'; } catch { /* Storage is optional. */ }
-    const ambientToggle = document.createElement('button');
-    ambientToggle.type = 'button';
-    ambientToggle.className = 'ambient-toggle';
-    (document.querySelector('.site-footer .container') || document.querySelector('.site-footer'))?.append(ambientToggle);
+    let backgroundMotion = 'auto';
+    try {
+      const savedMotion = localStorage.getItem('madvid-background-motion');
+      if (['auto', 'on', 'off'].includes(savedMotion)) backgroundMotion = savedMotion;
+      else if (localStorage.getItem('madvid-background-paused') === 'true') backgroundMotion = 'off';
+    } catch { /* Storage is optional. */ }
+    const ambientControls = document.createElement('div');
+    ambientControls.className = 'ambient-controls container';
+    const ambientLabel = document.createElement('label');
+    ambientLabel.htmlFor = 'background-motion';
+    ambientLabel.textContent = 'Background motion';
+    const ambientSelect = document.createElement('select');
+    ambientSelect.id = 'background-motion';
+    ambientSelect.setAttribute('aria-describedby', 'background-motion-status');
+    [['auto', 'Auto'], ['on', 'On'], ['off', 'Off']].forEach(([value, label]) => {
+      const option = document.createElement('option');
+      option.value = value;
+      option.textContent = label;
+      ambientSelect.append(option);
+    });
+    const ambientStatus = document.createElement('span');
+    ambientStatus.id = 'background-motion-status';
+    ambientStatus.className = 'ambient-motion-status';
+    ambientStatus.setAttribute('aria-live', 'polite');
+    ambientControls.append(ambientLabel, ambientSelect, ambientStatus);
+    const pageMain = document.querySelector('main');
+    if (pageMain) pageMain.before(ambientControls);
+    else header?.after(ambientControls);
     function updateBackgroundMotion() {
-      scene.dataset.paused = String(document.hidden || reducedMotion.matches || backgroundPaused);
-      ambientToggle.hidden = reducedMotion.matches;
-      ambientToggle.textContent = backgroundPaused ? 'Resume background motion' : 'Pause background motion';
-      ambientToggle.setAttribute('aria-pressed', String(backgroundPaused));
+      const enabled = backgroundMotion === 'on' || (backgroundMotion === 'auto' && !reducedMotion.matches);
+      scene.dataset.motion = backgroundMotion;
+      scene.dataset.paused = String(document.hidden || !enabled);
+      ambientSelect.value = backgroundMotion;
+      ambientStatus.textContent = backgroundMotion === 'auto'
+        ? (reducedMotion.matches ? 'System preference: still' : 'System preference: gentle motion')
+        : (backgroundMotion === 'on' ? 'Gentle motion enabled' : 'Still artwork');
     }
-    ambientToggle.addEventListener('click', () => {
-      backgroundPaused = !backgroundPaused;
-      try { localStorage.setItem('madvid-background-paused', String(backgroundPaused)); } catch { /* Storage is optional. */ }
+    ambientSelect.addEventListener('change', () => {
+      backgroundMotion = ambientSelect.value;
+      try { localStorage.setItem('madvid-background-motion', backgroundMotion); } catch { /* Storage is optional. */ }
       updateBackgroundMotion();
     });
     document.addEventListener('visibilitychange', updateBackgroundMotion);
