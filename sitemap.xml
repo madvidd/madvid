@@ -13,30 +13,6 @@
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
-    <loc>https://madvidd.github.io/madvid/media.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-09-17</lastmod>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/IMechE_UAS_Challenge_2026_Certificate.jpg</image:loc><image:title>IMechE UAS Challenge 2026 certificate — Seyed Mohammad Salehi</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-supervised-ml-certificate.jpg</image:loc><image:title>Supervised Machine Learning certificate — Seyed Mohammad Salehi</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-advanced-learning-algorithms-certificate.jpg</image:loc><image:title>Advanced Learning Algorithms certificate — Seyed Mohammad Salehi</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-unsupervised-learning-certificate.jpg</image:loc><image:title>Unsupervised Learning, Recommenders, Reinforcement Learning certificate — Seyed Mohammad Salehi</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-ptx-cover.jpg</image:loc><image:title>Rhizo PTX experience media</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-ptx-logo.jpg</image:loc><image:title>Rhizo PTX logo</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/team-peryton-cover.jpg</image:loc><image:title>Team Peryton UAV engineering media</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/team-peryton-logo.jpg</image:loc><image:title>Team Peryton logo</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-students-union-cover.jpg</image:loc><image:title>Surrey Students' Union experience media</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-students-union-logo.jpg</image:loc><image:title>Surrey Students' Union logo</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-compsoc-cover.jpg</image:loc><image:title>Surrey CompSoc committee media</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-compsoc-logo.jpg</image:loc><image:title>Surrey CompSoc logo</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-ears-cover.jpg</image:loc><image:title>Surrey EARS electronics society media</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-ears-logo.jpg</image:loc><image:title>Surrey EARS logo</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-enterprise-hub-cover.jpg</image:loc><image:title>Surrey Enterprise Hub media</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-enterprise-hub-logo.jpg</image:loc><image:title>Surrey Enterprise Hub logo</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-cover.jpg</image:loc><image:title>halow Project volunteering media</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-logo.jpg</image:loc><image:title>halow Project logo</image:title></image:image>
-  </url>
-  <url>
     <loc>https://madvidd.github.io/madvid/research.html</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -59,5 +35,107 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-08-05</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/profile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/certificates.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/IMechE_UAS_Challenge_2026_Certificate.jpg</image:loc><image:title>IMechE UAS Challenge 2026 certificate of participation awarded to Seyed Mohammad Salehi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-supervised-ml-certificate.jpg</image:loc><image:title>Supervised Machine Learning: Regression and Classification certificate awarded to Seyed Mohammad Salehi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-advanced-learning-algorithms-certificate.jpg</image:loc><image:title>Advanced Learning Algorithms certificate awarded to Seyed Mohammad Salehi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-unsupervised-learning-certificate.jpg</image:loc><image:title>Unsupervised Learning, Recommenders, Reinforcement Learning certificate awarded to Seyed Mohammad Salehi</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/courses.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/experience.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-ptx-cover.jpg</image:loc><image:title>Rhizo PTX LinkedIn cover image</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-ptx-logo.jpg</image:loc><image:title>Rhizo PTX logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/team-peryton-cover.jpg</image:loc><image:title>Team Peryton LinkedIn cover image</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/team-peryton-logo.jpg</image:loc><image:title>Team Peryton logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-students-union-cover.jpg</image:loc><image:title>Surrey Students' Union LinkedIn cover image</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-students-union-logo.jpg</image:loc><image:title>Surrey Students' Union logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-compsoc-cover.jpg</image:loc><image:title>Surrey CompSoc LinkedIn cover image</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-compsoc-logo.jpg</image:loc><image:title>Surrey CompSoc logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-ears-cover.jpg</image:loc><image:title>Surrey Electronics and Amateur Radio Society LinkedIn cover image</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-ears-logo.jpg</image:loc><image:title>Surrey EARS logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-enterprise-hub-cover.jpg</image:loc><image:title>Surrey Enterprise Hub LinkedIn cover image</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/surrey-enterprise-hub-logo.jpg</image:loc><image:title>Surrey Enterprise Hub logo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-cover.jpg</image:loc><image:title>halow project LinkedIn cover image</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-logo.jpg</image:loc><image:title>halow project logo</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/gallery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/uas-team-photo.jpg</image:loc><image:title>UAS Team Photo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/uas-challenge-2026.jpg</image:loc><image:title>IMechE UAS Challenge 2026</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-mosfet-switch.jpg</image:loc><image:title>MOSFET Controlled Switch</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-npn-switch.jpg</image:loc><image:title>Low-side NPN Switch</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/stage-crew-refreshers-week.jpg</image:loc><image:title>Surrey Stage Crew Refresher's Week Representative</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/stage-crew-musical-theatre-social.jpg</image:loc><image:title>Surrey Stage Crew and Musical Theatre Societies' Social</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/head-representative.jpg</image:loc><image:title>Head Reps — Computer Science and Electronic Engineering Head Representative</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/course-representative.jpg</image:loc><image:title>Computer Vision, Robotics, and Machine Learning MSc FT Course Rep</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/documents.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-volunteering-certificate.jpg</image:loc><image:title>halow Volunteering Recognition Certificate</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ee-scientific-association-document.jpg</image:loc><image:title>Electrical Engineering Scientific Association — document preview</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ee-editor-in-chief-document.jpg</image:loc><image:title>Editor-in-Chief — Kahroba-ye-Beheshti document preview</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/act-awareness-certificate.jpg</image:loc><image:title>ACT Awareness e-Learning Certificate of Completion</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/kaggle-community-member.jpg</image:loc><image:title>Kaggle Community Member Badge</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/kaggle-two-years.jpg</image:loc><image:title>2 Years on Kaggle Badge</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/kaggle-one-year.jpg</image:loc><image:title>1 Year on Kaggle Badge</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ielts-2024-report.jpg</image:loc><image:title>IELTS Academic — November 2024 (shared redacted report)</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ielts-2022-report.jpg</image:loc><image:title>IELTS Academic — December 2022 (shared redacted report)</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ili-english-certificate.jpg</image:loc><image:title>Iran Language Institute — 630-hour course completion</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ili-course-description.jpg</image:loc><image:title>Iran Language Institute — course description and 630-hour structure</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ielts-teacher-training.jpg</image:loc><image:title>IELTS Teacher Training Course — 32 hours, Shahid Beheshti University</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/photoshop-sbu-certificate.jpg</image:loc><image:title>Adobe Photoshop — Shahid Beheshti University (shared redacted certificate)</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/electronic-music-production-certificate.jpg</image:loc><image:title>Electronic Music Production — theory 100/100, total 89/100</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/photoshop-tvto-certificate.jpg</image:loc><image:title>Adobe Photoshop — TVTO, total 78/100</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/posts.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/compsoc-committee-announcement.jpg</image:loc><image:title>Colourful Surrey CompSoc logo shared with the 2026/27 committee announcement</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/links.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
   </url>
 </urlset>
