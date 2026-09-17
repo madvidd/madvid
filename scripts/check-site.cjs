@@ -57,7 +57,7 @@ for (const [file, html] of active) {
   const canonical = html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
   if (canonical !== canonicalFor(file)) errors.push(`${file}: unexpected canonical ${canonical}`);
   if (!html.includes('nav-more-menu')) errors.push(`${file}: shared navigation missing`);
-  if (!/script\.js\?v=20260917-sections/.test(html)) errors.push(`${file}: shared script version missing`);
+  if (!/script\.js\?v=20260917-final-results/.test(html)) errors.push(`${file}: shared script version missing`);
 }
 
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');

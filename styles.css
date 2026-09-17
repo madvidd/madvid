@@ -170,7 +170,10 @@ main, .site-footer { position: relative; z-index: 1; }
 .nav-more > summary { display: flex; align-items: center; justify-content: space-between; gap: .55rem; min-height: 44px; padding: .55rem .85rem; list-style: none; border-radius: 9px; cursor: pointer; color: var(--muted); font-size: .84rem; font-weight: 600; }
 .nav-more > summary::-webkit-details-marker { display: none; }
 .nav-more > summary:hover, .nav-more[open] > summary, .nav-more[data-current="true"] > summary { color: var(--ink); background: var(--brand); }
-.nav-more > summary > span { font-size: 1rem; line-height: 1; }
+.nav-more > summary > span { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 .8rem; width: .8rem; height: .8rem; font-size: 0; line-height: 1; }
+.nav-more > summary > span::after { content: ""; display: block; width: .42rem; height: .42rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-.12rem) rotate(45deg); transition: transform .2s ease; }
+.nav-more[open] > summary > span::after { transform: translateY(.1rem) rotate(225deg); }
+@media (prefers-reduced-motion: reduce) { .nav-more > summary > span::after { transition: none; } }
 .nav-more-menu { position: absolute; top: calc(100% + .5rem); right: 0; display: grid; min-width: 235px; padding: .55rem; border: 1px solid #d2e5f2; border-radius: 14px; background: #fff; box-shadow: 0 14px 40px rgba(15, 43, 60, .12); }
 .nav-more-menu a { justify-content: flex-start; font-size: .82rem; border-radius: 7px; }
 .footer-links { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem 1rem; }
