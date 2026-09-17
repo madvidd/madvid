@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260917-skills-motion" />
+  <link rel="stylesheet" href="styles.css?v=20260917-sections" />
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Seyed Mohammad Salehi">
   <meta property="og:title" content="Seyed Mohammad Salehi | Computer Vision, Robotics &amp; Machine Learning">
@@ -77,23 +77,29 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="#top">
+      <a class="brand" href="index.html#top">
         <img class="avatar" src="assets/avatar.jpg" alt="Portrait of Seyed Mohammad Salehi" width="52" height="67" decoding="async" />
-        <div class="brand-text">
-          <span class="brand-name">Seyed Mohammad Salehi</span>
-          <p>Computer Vision, Robotics, ML &amp; Embedded Systems</p>
-        </div>
+        <div class="brand-text"><span class="brand-name">Seyed Mohammad Salehi</span><p>Computer Vision, Robotics, ML &amp; Embedded Systems</p></div>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
+        <a href="index.html" aria-current="page">About</a>
         <a href="research.html">Research</a>
         <a href="projects.html">Projects</a>
-        <a href="media.html">Media &amp; Links</a>
+        <a href="experience.html">Experience</a>
+        <details class="nav-more">
+          <summary>More <span aria-hidden="true">⌄</span></summary>
+          <div class="nav-more-menu">
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="references.html">References</a>
+            <a href="media.html">Media &amp; Links</a>
+            <a href="media/music.html">Music</a>
+          </div>
+        </details>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
-
   <main id="main-content">
     <div id="top"></div>
     <section id="hero" class="hero container">
@@ -119,7 +125,22 @@
         <p>Research curiosity.<br />Engineering practice.</p>
       </aside>
     </section>
-
+    <section id="about" class="section container">
+      <h2>At the intersection of research and engineering.</h2>
+      <p>I bridge hardware and software to turn research ideas into reliable working systems, from machine-learning models and control algorithms to embedded firmware and custom electronic circuits.</p>
+      <p>My work spans motion forecasting, autonomous systems, PID and safety logic, UAV flight control, STM32 development, circuit design, system testing and hardware-software integration.</p>
+      <ul class="tags">
+        <li>Artificial Intelligence</li>
+        <li>Machine &amp; Deep Learning</li>
+        <li>Computer Vision</li>
+        <li>Motion Prediction</li>
+        <li>Robotics &amp; Autonomous Systems</li>
+        <li>Control &amp; Signal Processing</li>
+        <li>Embedded Systems &amp; IoT</li>
+        <li>ASIC &amp; FPGA</li>
+        <li>Speech &amp; Audio Processing</li>
+      </ul>
+    </section>
     <section id="research" class="section container" aria-labelledby="research-heading">
       <div class="research-spotlight">
         <div class="spotlight-copy">
@@ -135,165 +156,7 @@
         </div>
       </div>
     </section>
-
-    <section id="about" class="section container">
-      <h3>About</h3>
-      <p><strong>Based in:</strong> London, UK</p>
-      <p>I bridge hardware and software to turn research ideas into reliable working systems, from machine-learning models and control algorithms to embedded firmware and custom electronic circuits.</p>
-      <p>My work spans motion forecasting, autonomous systems, PID and safety logic, UAV flight control, STM32 development, circuit design, system testing and hardware-software integration.</p>
-      <nav class="media-jump-links" aria-label="Explore my background"><a href="#skills">Technical skills</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#extras">Certificates &amp; activities</a><a href="#references">References</a></nav>
-      <ul class="tags">
-        <li>Artificial Intelligence</li>
-        <li>Machine &amp; Deep Learning</li>
-        <li>Computer Vision</li>
-        <li>Motion Prediction</li>
-        <li>Robotics &amp; Autonomous Systems</li>
-        <li>Control &amp; Signal Processing</li>
-        <li>Embedded Systems &amp; IoT</li>
-        <li>ASIC &amp; FPGA</li>
-        <li>Speech &amp; Audio Processing</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="section container">
-      <h3>Skills</h3>
-      <div class="grid skills-grid">
-        <div class="card"><h4>Programming</h4><ul><li>Python, C/C++ &amp; Embedded C</li><li>MATLAB/Simulink</li><li>NumPy, pandas &amp; scikit-learn</li><li>Visual Studio</li><li>Microsoft Visual Studio Code</li><li>Jupyter, Conda &amp; Colab</li></ul></div>
-        <div class="card"><h4>AI &amp; Perception</h4><ul><li>Machine &amp; Deep Learning</li><li>PyTorch, TensorFlow &amp; JAX</li><li>Computer Vision &amp; OpenCV</li><li>Human Motion Forecasting &amp; Time-Series Modelling</li><li>Speech &amp; Audio Processing</li><li>Mamba/State-Space Models &amp; Attention</li><li>Model Training, Feature Engineering &amp; Hyperparameter Tuning</li></ul></div>
-        <div class="card"><h4>Control &amp; Embedded</h4><ul><li>PID &amp; Control-System Design, Parameter Tuning</li><li>Safety Interlocks &amp; System Testing</li><li>Hardware-Software Integration</li><li>Firmware Development, STM32 Microcontrollers &amp; Microprocessors</li><li>STM32Cube &amp; Keil MDK</li><li>Arduino &amp; Atmel Studio AVR</li><li>Raspberry Pi</li><li>Code Composer Studio</li></ul></div>
-        <div class="card"><h4>Circuit &amp; CAD</h4><ul><li>Analogue/Digital Circuit Design &amp; Fabrication</li><li>MOSFET/BJT Switching &amp; Voltage/Current Regulation</li><li>PCB Design, Altium &amp; KiCad</li><li>Board Bring-Up &amp; Oscilloscopes</li><li>EMC/EMI &amp; Requirements Verification</li><li>ADS, HSpice &amp; PSpice</li><li>Proteus &amp; Autodesk Fusion</li></ul></div>
-        <div class="card"><h4>Digital Design</h4><ul><li>Vivado</li><li>Xilinx ISE</li><li>ASIC/FPGA</li><li>VHDL &amp; Verilog</li></ul></div>
-        <div class="card"><h4>Research Tools</h4><ul><li>Argoverse 2</li><li>Benchmarking, Experimental Design &amp; Evaluation Metrics</li><li>Ablation Studies &amp; Statistical Analysis</li><li>Reproducibility &amp; Experiment Tracking</li><li>Literature Review &amp; Technical Publication</li><li>LaTeX, Overleaf &amp; EndNote</li><li>Text Editing</li><li>COOJA (IoT)</li></ul></div>
-        <div class="card"><h4>Robotics</h4><ul><li>ROS/ROS 2, Gazebo &amp; Linux</li><li>SLAM, Path Planning &amp; Sensor Fusion</li><li>Autonomous Navigation &amp; Systems</li><li>UAVs &amp; Flight-Control Programming</li><li>Signal Processing</li><li>System Validation</li></ul></div>
-        <div class="card"><h4>Software Delivery</h4><ul><li>Git &amp; Docker</li><li>Model Deployment &amp; MLOps</li></ul></div>
-        <div class="card"><h4>Professional Collaboration</h4><ul><li>Digital Literacy</li><li>Cross-team Collaboration</li><li>Persuasion</li><li>Time Management</li><li>Teamwork</li><li>Communication</li><li>Meeting Skills</li><li>Organization Skills</li><li>Leadership</li><li>Team Management</li></ul></div>
-        <div class="card"><h4>Creative &amp; Teaching</h4><ul><li>Music Production &amp; DJing</li><li>Ableton Live</li><li>Adobe Photoshop</li><li>Adobe Illustrator</li><li>Teaching English as a Foreign Language (TEFL)</li></ul></div>
-      </div>
-    </section>
-
-    <section id="experience" class="section container">
-      <h3>Experience</h3>
-      <div class="timeline">
-        <article class="item">
-          <header><h4>Team Member (Rubix)</h4><span>Surrey Students&rsquo; Union &middot; Guildford, UK</span><time datetime="2026-09">September 2026 &ndash; Present</time></header>
-          <ul><li>Team member at <a href="https://surreyunion.org/your-spaces/venue-rubix" target="_blank" rel="noopener">Rubix</a>, the Students&rsquo; Union club and live-event venue.</li></ul>
-        </article>
-        <article class="item">
-          <header><h4>Head Representative</h4><span>Surrey Students&rsquo; Union &middot; Guildford, UK</span><time datetime="2026-08">August 2026 &ndash; Present</time></header>
-          <ul>
-            <li>I work in the &ldquo;Voice Zone&rdquo; and am the Head Rep for the &ldquo;Faculty of Engineering and Physical Sciences (FEPS)&rdquo; at the University of Surrey.</li>
-          </ul>
-        </article>
-        <article class="item">
-          <header><h4>Electrical Control Engineer</h4><span>Rhizo PTX (freelance) / iTEK Project &middot; Surrey, UK</span><time>March 2026 &ndash; September 2026</time></header>
-          <ul>
-            <li>Designed and integrated a hardware-software dashboard with PID control, parameter tuning, operating feedback, safety interlocks and operator controls.</li>
-            <li>Engineered MOSFET-controlled and low-side NPN-transistor switching stages for voltage/current regulation.</li>
-            <li>Optimised PID parameters and implemented the corresponding hardware controls and interface buttons in the dashboard software.</li>
-          </ul>
-        </article>
-        <article class="item">
-          <header><h4>Teaching Assistant</h4><span>Shahid Beheshti University &middot; Tehran, Iran</span><time>Feb 2023 – Jul 2024</time></header>
-          <ul>
-            <li>Supported Microprocessors and Computer Architecture, Artificial Intelligence, and Technical English modules.</li>
-            <li><strong>Microprocessors and Computer Architecture:</strong> Lab support with Professor Nader Kazemi, February &ndash; July 2024.</li>
-            <li><strong>Introduction to Artificial Intelligence:</strong> With Professor Shahabedin Nabavi, February 2023 &ndash; February 2024. <a href="https://github.com/SBU-CE/EE085-Introduction-To-AI/" target="_blank" rel="noopener">Course repository</a>.</li>
-            <li><strong>Technical Language (Electrical Engineering English):</strong> With Professor Shokrollah Karimian, February &ndash; July 2023.</li>
-            <li><strong>Introduction to Artificial Intelligence:</strong> With Professor Atefe Aghaei, February &ndash; July 2023.</li>
-          </ul>
-        </article>
-        <article class="item">
-          <header><h4>Software Engineer &ndash; Embedded Systems</h4><span>Sarmad Company (part-time) &middot; Tehran, Iran</span><time>Feb 2023 – Jul 2023</time></header>
-          <ul><li>Developed embedded-system software in C using Visual Studio and Code Composer Studio.</li></ul>
-        </article>
-        <article class="item">
-          <header><h4>Robotics and AI Trainer</h4><span>Sigma Company (part-time) &middot; Tehran, Iran</span><time>Apr 2020 – Sep 2022</time></header>
-          <ul>
-            <li>Taught robotics and AI and coached students for national and international competitions.</li>
-            <li>Co-developed software curricula, robot bodies, electronic circuits and starter firmware, including board programming.</li>
-            <li>Served as an executive organiser for national robotics competitions at the University of Tehran (2021) and international robotics competitions in India (2022).</li>
-          </ul>
-        </article>
-        <article class="item">
-          <header><h4>Software Engineer &ndash; Embedded Systems</h4><span>Cube Electronic (part-time) &middot; Tehran, Iran</span><time>Apr 2022 – Jun 2022</time></header>
-          <ul><li>Developed C/C++ firmware for STM32 microcontrollers using STM32Cube and Keil MDK.</li></ul>
-        </article>
-        <article class="item">
-          <header><h4>Telecommunications Analyst</h4><span>XICOMM (part-time) &middot; Remote, San Francisco, USA</span><time>July 2021 &ndash; November 2021</time></header>
-          <ul><li>Managed, tested and monitored Voice over IP calls as a remote Network Operations Centre team member.</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="education" class="section container">
-      <h3>Education</h3>
-      <div class="list">
-        <div class="edu">
-          <h4>M.Sc. Computer Vision, Robotics &amp; Machine Learning &mdash; Distinction, <strong>70.13%</strong></h4>
-          <p><span>University of Surrey &middot; Guildford, UK</span> &middot; <time>September 2025 &ndash; September 2026</time></p>
-          <ul>
-            <li><strong>Thesis:</strong> Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting.</li>
-            <li>Graduated with Distinction. Investigated uncertainty-aware context, relative geometry, attention normalisation and Mamba state-space placement in SEAM and SHARP on Argoverse 2. <a href="research.html">Explore the dissertation and results</a>.</li>
-            <li><strong>Module marks:</strong> Applied Machine Learning 85; Robotics 78; Research, Professionalism and Innovation 75; Computer Vision and Pattern Recognition 70 (coursework 100/100); Medical Robotics 67; Advanced Topics in Computer Vision and Deep Learning 62.</li>
-            <li><strong>Coursework:</strong> Speech &amp; Audio Processing &amp; Recognition 98/100.</li>
-          </ul>
-        </div>
-        <div class="edu">
-          <h4>B.Sc. Electrical Engineering &mdash; Upper second class honours (2:1), GPA 77/100</h4>
-          <p><span>Shahid Beheshti University</span> · <time>Sep 2019 – Jul 2023</time></p>
-          <ul>
-            <li>Thesis: Simulation of a Self-Driving Car (92.5/100).</li>
-            <li>Selected subjects: Embedded Systems, Artificial Intelligence, Programming, Microprocessors, and Linear Control.</li>
-            <li>Co-authored the Electrical Engineering Scientific Association magazine, Kahroba-ye-Beheshti, writing about the Internet of Things, October 2019 &ndash; October 2020.</li>
-          </ul>
-        </div>
-        <div class="edu">
-          <h4>High School Diploma in Mathematics &amp; Physics &mdash; A* (GPA 96/100)</h4>
-          <p><span>National Organization for Development of Exceptional Talents (Helli 4)</span> · <time>Oct 2016 – Jul 2019</time></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="extras" class="section container">
-      <h3>Publications &amp; Certificates</h3>
-      <div class="grid two">
-        <div class="card">
-          <h4>Research Article</h4>
-          <ul>
-            <li><a href="research.html">Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting</a></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>Certificates</h4>
-          <ul>
-            <li><a href="assets/IMechE_UAS_Challenge_2026_Certificate.jpg" target="_blank" rel="noopener">IMechE UAS Challenge 2026 Certificate of Participation</a></li>
-            <li><a href="assets/linkedin/halow-volunteering-certificate.jpg" target="_blank" rel="noopener">Halow Project Volunteer Certificate</a></li>
-            <li><a href="https://www.coursera.org/account/accomplishments/specialization/BRKGUX2DGZQ4" target="_blank" rel="noopener">Machine Learning Specialization (Coursera/Stanford)</a></li>
-            <li><a href="https://www.coursera.org/account/accomplishments/specialization/4MVGAXEJ7KZA" target="_blank" rel="noopener">Mathematics for Machine Learning and Data Science Specialization (DeepLearning.AI/Coursera)</a></li>
-            <li><a href="https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd0013" target="_blank" rel="noopener">Self-Driving Car Engineer Training (Udacity)</a> <span class="muted">— course information</span></li>
-            <li>English Teacher Training (<a href="media/certificates.html#kish-teacher-training">Kish Institute</a> and <a href="assets/linkedin/ielts-teacher-training.jpg" target="_blank" rel="noopener">Shahid Beheshti University</a>)</li>
-            <li>Photoshop Certificates (<a href="assets/linkedin/photoshop-tvto-certificate.jpg" target="_blank" rel="noopener">TVTO</a> and <a href="assets/linkedin/photoshop-sbu-certificate.jpg" target="_blank" rel="noopener">Shahid Beheshti University</a>)</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 class="mt">Leadership, Memberships &amp; Activities</h3>
-      <ul class="list two-col">
-        <li><strong>University of Surrey UAS Team Peryton:</strong> Member, September 2025 &ndash; Present. Built and flew a UAV with a multidisciplinary team for the IMechE UAS Challenge 2026; contributed flight-control programming, parameter tuning, and electronic-circuit design and fabrication. <a href="https://surreyunion.org/your-activity/clubs-and-societies-a-z/uas-team-peryton" target="_blank" rel="noopener">Society page</a> &middot; <a href="https://www.instagram.com/uav_team_peryton/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://team-peryton.github.io/" target="_blank" rel="noopener">Team website</a>.</li>
-        <li><strong>Treasurer, Surrey CompSoc:</strong> Society finances for the 2026/27 academic year, March 2026 &ndash; Present. <a href="https://surreyunion.org/your-activity/clubs-and-societies-a-z/compsoc" target="_blank" rel="noopener">Society page</a> &middot; <a href="https://www.instagram.com/surreycompsoc/" target="_blank" rel="noopener">Instagram</a>.</li>
-        <li><strong>Treasurer, University of Surrey Languages Society:</strong> Society finances for the 2026/27 academic year, March 2026 &ndash; Present. <a href="https://surreyunion.org/your-activity/clubs-and-societies-a-z/languages-society" target="_blank" rel="noopener">Society page</a> &middot; <a href="https://www.instagram.com/surreylangsoc/" target="_blank" rel="noopener">Instagram</a>.</li>
-        <li><strong>Treasurer, Surrey Walking Society:</strong> Society finances for the 2026/27 academic year, March 2026 &ndash; Present. <a href="https://surreyunion.org/your-activity/clubs-and-societies-a-z/walking-society" target="_blank" rel="noopener">Society page</a> &middot; <a href="https://www.instagram.com/surreywalkingsoc/" target="_blank" rel="noopener">Instagram</a>.</li>
-        <li><strong>Course Representative, CVRM M.Sc., Surrey Students&rsquo; Union:</strong> Student liaison for the Computer Vision, Robotics and Machine Learning M.Sc., September 2025 &ndash; September 2026. <a href="https://surreyunion.org/your-voice/course-reps" target="_blank" rel="noopener">Course representation</a>.</li>
-        <li><strong>University of Surrey Stage Crew:</strong> Member, event support, September 2025 &ndash; Present. <a href="https://surreyunion.org/your-activity/clubs-and-societies-a-z/stage-crew" target="_blank" rel="noopener">Society page</a> &middot; <a href="https://www.instagram.com/surreystagecrew/" target="_blank" rel="noopener">Instagram</a>.</li>
-        <li><strong>Surrey EARS / Battlebots team:</strong> Electronics &amp; Amateur Radio Society member, September 2025 &ndash; September 2026. Participated in lab activities and 3D-printing projects, learning about radios and antennas. <a href="https://surreyunion.org/your-activity/clubs-and-societies-a-z/ears" target="_blank" rel="noopener">Society page</a> &middot; <a href="https://instagram.com/surreyears" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.surreyears.co.uk/" target="_blank" rel="noopener">Society website</a>.</li>
-        <li><strong>Surrey Enterprise Hub:</strong> Innovation programme member, September 2025 &ndash; September 2026. <a href="https://www.surrey.ac.uk/innovation/students" target="_blank" rel="noopener">University programme</a> &middot; <a href="https://www.instagram.com/surreyenterprisehub/" target="_blank" rel="noopener">Instagram</a>.</li>
-        <li><strong>Peryton Space:</strong> Member, space-engineering events, September 2025 &ndash; September 2026. <a href="https://surreyunion.org/your-activity/clubs-and-societies-a-z/peryton-space" target="_blank" rel="noopener">Society page</a> &middot; <a href="https://www.instagram.com/perytonspace/" target="_blank" rel="noopener">Instagram</a>.</li>
-        <li><strong>halow:</strong> Community support volunteer, September 2025 &ndash; September 2026. Supported activities for adults with learning disabilities and autism across Surrey. <a href="https://www.halowproject.org.uk/" target="_blank" rel="noopener">halow Project</a>.</li>
-        <li><strong>Research Secretary, Electrical Engineering Scientific Association, Shahid Beheshti University:</strong> Research outreach and contributions to the association&rsquo;s Harekat Festival activities, September 2020 &ndash; September 2021.</li>
-        <li><strong>Editor-in-Chief, Kahroba-ye-Beheshti, Shahid Beheshti University:</strong> Technical publishing, September 2020 &ndash; September 2021.</li>
-      </ul>
-
-      <h3 class="mt">Featured Project Case Studies</h3>
+    <section id="selected-work" class="section container"><div class="section-heading"><p class="eyebrow">Engineering in practice</p><h2>Selected work</h2><p>From intelligent models to working hardware.</p></div>
       <div class="grid two featured-projects">
         <a class="contact-card" href="projects/rhizo-ptx-control-dashboard.html">
           <strong>Rhizo PTX Integrated Control Dashboard</strong>
@@ -309,47 +172,21 @@
         </a>
       </div>
     </section>
-
-    <section id="references" class="section container">
-      <h3>Professional References</h3>
-      <div class="grid two">
-        <a class="contact-card" href="mailto:s.fallah@surrey.ac.uk">
-          <strong>Professor Saber Fallah</strong>
-          <span>1st M.Sc. Thesis Supervisor</span>
-          <span>Professor of Safe AI and Autonomy, University of Surrey</span>
-          <span>s.fallah@surrey.ac.uk</span>
-        </a>
-        <a class="contact-card" href="https://www.surrey.ac.uk/people/kevin-wells" target="_blank" rel="noopener">
-          <strong>Professor Kevin Wells</strong>
-          <span>2nd M.Sc. Thesis Supervisor</span>
-          <span>Professor of AI in Human and Veterinary Healthcare, University of Surrey (CVSSP)</span>
-          <span>k.wells@surrey.ac.uk</span>
-        </a>
-        <a class="contact-card" href="https://www.southampton.ac.uk/wsi/centre-for-doctoral-training/alumni/gareth-beeston.page" target="_blank" rel="noopener">
-          <strong>Dr Gareth Beeston</strong>
-          <span>iTEK Project Leader</span>
-          <span>Senior Project Officer, iTEK, Surrey Student Enterprise, Innovation and Impact</span>
-          <span>g.beeston@surrey.ac.uk</span>
-        </a>
-        <a class="contact-card" href="mailto:info@rhizoptx.com">
-          <strong>Ash Stott</strong>
-          <span>Rhizo PTX Project Recommender</span>
-          <span>CEO and Co-founder, Rhizo PTX</span>
-          <span>info@rhizoptx.com</span>
-        </a>
-        <a class="contact-card" href="mailto:info@rhizoptx.com">
-          <strong>Ben Kyffin</strong>
-          <span>Rhizo PTX Project Recommender</span>
-          <span>CTO and Co-founder, Rhizo PTX</span>
-          <span>info@rhizoptx.com</span>
-        </a>
+    <section id="explore" class="section container" aria-labelledby="explore-heading">
+      <div class="section-heading"><p class="eyebrow">Explore my work &amp; background</p><h2 id="explore-heading">A closer look.</h2><p>Each section brings together the relevant work, evidence and details.</p></div>
+      <div class="overview-grid">
+        <a class="overview-card" href="projects.html"><span class="overview-number">01</span><h3>Projects <span aria-hidden="true">↗</span></h3><p>Control dashboards, autonomous systems, UAV engineering and battery-state estimation.</p></a>
+        <a class="overview-card" href="education.html"><span class="overview-number">02</span><h3>Education <span aria-hidden="true">↗</span></h3><p>M.Sc. with Distinction, electrical engineering foundations, publications and professional learning.</p></a>
+        <a class="overview-card" href="experience.html"><span class="overview-number">03</span><h3>Experience <span aria-hidden="true">↗</span></h3><p>Engineering roles, teaching, student leadership, memberships and community work.</p></a>
+        <a class="overview-card" href="skills.html"><span class="overview-number">04</span><h3>Skills <span aria-hidden="true">↗</span></h3><p>The tools and methods behind my work in AI, robotics, electronics and software.</p></a>
+        <a class="overview-card" href="references.html"><span class="overview-number">05</span><h3>References <span aria-hidden="true">↗</span></h3><p>Academic supervisors and professional contacts from research and engineering projects.</p></a>
+        <a class="overview-card" href="media.html"><span class="overview-number">06</span><h3>Media & Links <span aria-hidden="true">↗</span></h3><p>Certificates, project imagery, documents, posts and my public professional profiles.</p></a>
+        <a class="overview-card" href="media/music.html"><span class="overview-number">07</span><h3>Music <span aria-hidden="true">↗</span></h3><p>DJing and music production under Madvid, with links to listen and follow.</p></a>
+        <a class="overview-card" href="contact.html"><span class="overview-number">08</span><h3>Contact <span aria-hidden="true">↗</span></h3><p>Get in touch about research, engineering opportunities and creative collaboration.</p></a>
       </div>
     </section>
-
   </main>
-
-  <footer class="site-footer"><div class="container"><p>© 2026 Seyed Mohammad Salehi · <a href="research.html">Research</a> · <a href="projects.html">Projects</a> · <a href="media.html">Media &amp; Links</a> · <a href="sitemap.xml">Sitemap</a></p></div></footer>
-  <button id="backToTop" aria-label="Back to top">↑</button>
-  <script src="script.js?v=20260917-skills-motion" defer></script>
+  <footer class="site-footer"><div class="container"><p>© 2026 Seyed Mohammad Salehi</p><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">About</a><a href="research.html">Research</a><a href="projects.html">Projects</a><a href="education.html">Education</a><a href="experience.html">Experience</a><a href="skills.html">Skills</a><a href="references.html">References</a><a href="media.html">Media &amp; Links</a><a href="media/music.html">Music</a><a href="contact.html">Contact</a><a href="sitemap.xml">Sitemap</a></nav></div></footer>
+  <script src="script.js?v=20260917-sections" defer></script>
 </body>
 </html>

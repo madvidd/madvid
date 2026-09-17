@@ -15,12 +15,25 @@
       '#public-links': 'media/links.html#public-links'
     };
     const pagePath = window.location.pathname;
+    if (/\/media\/certificates\.html$/.test(pagePath) && window.location.hash === '#electronic-music-production') {
+      window.location.replace(new URL('music.html#music-certificate', window.location.href).href);
+      return;
+    }
     if (/\/media\.html$/.test(pagePath) && Object.hasOwn(legacyMediaDestinations, window.location.hash)) {
       window.location.replace(new URL(legacyMediaDestinations[window.location.hash], window.location.href).href);
       return;
     }
-    if ((/\/index\.html$/.test(pagePath) || pagePath.endsWith('/')) && window.location.hash === '#contact') {
-      window.location.replace(new URL('contact.html#contact', window.location.href).href);
+    const legacyProfileDestinations = {
+      '#contact': 'contact.html#contact',
+      '#education': 'education.html#education',
+      '#extras': 'education.html#extras',
+      '#skills': 'skills.html#skills',
+      '#experience': 'experience.html#experience',
+      '#leadership': 'experience.html#leadership',
+      '#references': 'references.html#references'
+    };
+    if ((/\/index\.html$/.test(pagePath) || pagePath.endsWith('/')) && Object.hasOwn(legacyProfileDestinations, window.location.hash)) {
+      window.location.replace(new URL(legacyProfileDestinations[window.location.hash], window.location.href).href);
       return;
     }
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -49,7 +62,12 @@
       gallery: '<rect x="170" y="150" width="370" height="460" rx="8" transform="rotate(-18 355 380)"/><rect x="450" y="75" width="360" height="470" rx="8" transform="rotate(14 630 310)"/><rect x="370" y="320" width="470" height="300" rx="8" transform="rotate(-5 605 470)"/><path d="M255 490L345 355 430 440 495 375M510 360L600 220 720 340"/><circle cx="335" cy="270" r="27"/><circle cx="675" cy="185" r="22"/>',
       documents: '<path d="M230 100H650L790 240V650H230ZM650 100V240H790M145 185V725H705M315 350H690M315 425H690M315 500H610M315 275H560"/><path d="M855 115H955V530H855M85 80H150M117 47V113"/>',
       posts: '<path d="M-20 165Q115 15 250 165T520 165T790 165T1060 165M-20 245Q115 95 250 245T520 245T790 245T1060 245M-20 325Q115 175 250 325T520 325T790 325T1060 325M-20 405Q115 255 250 405T520 405T790 405T1060 405M-20 485Q115 335 250 485T520 485T790 485T1060 485M-20 565Q115 415 250 565T520 565T790 565T1060 565"/>',
-      links: '<ellipse cx="555" cy="385" rx="390" ry="150" transform="rotate(-35 555 385)"/><ellipse cx="555" cy="385" rx="390" ry="150" transform="rotate(35 555 385)"/><ellipse cx="555" cy="385" rx="150" ry="325"/><circle cx="555" cy="385" r="34"/><circle cx="300" cy="180" r="16"/><circle cx="825" cy="580" r="16"/><circle cx="555" cy="65" r="12"/><circle cx="865" cy="170" r="12"/>'
+      links: '<ellipse cx="555" cy="385" rx="390" ry="150" transform="rotate(-35 555 385)"/><ellipse cx="555" cy="385" rx="390" ry="150" transform="rotate(35 555 385)"/><ellipse cx="555" cy="385" rx="150" ry="325"/><circle cx="555" cy="385" r="34"/><circle cx="300" cy="180" r="16"/><circle cx="825" cy="580" r="16"/><circle cx="555" cy="65" r="12"/><circle cx="865" cy="170" r="12"/>',
+      education: '<path d="M130 180Q340 110 550 245Q760 110 970 180V610Q760 540 550 675Q340 540 130 610ZM550 245V675M215 275Q365 245 465 305M215 355Q365 325 465 385M215 435Q365 405 465 465M635 305Q735 245 885 275M635 385Q735 325 885 355M635 465Q735 405 885 435"/><path d="M270 90L550 15 830 90 550 170ZM830 90V245"/>',
+      skills: '<path d="M350 135L570 10 790 135V390L570 515 350 390ZM350 135L570 265 790 135M570 265V515"/><path d="M100 450L265 355 430 450V640L265 735 100 640ZM100 450L265 545 430 450M265 545V735M745 470L900 385 1055 470V650L900 735 745 650ZM745 470L900 555 1055 470M900 555V735"/>',
+      career: '<path d="M80 630H290V475H500V320H710V165H1000"/><path d="M80 680H340V525H550V370H760V215H1000"/><circle cx="290" cy="475" r="36"/><circle cx="500" cy="320" r="36"/><circle cx="710" cy="165" r="36"/><path d="M273 475L286 488 309 460M483 320L496 333 519 305M693 165L706 178 729 150"/>',
+      references: '<circle cx="550" cy="330" r="130"/><circle cx="550" cy="310" r="34"/><path d="M475 385Q550 315 625 385M220 160L440 245M880 160L660 245M240 605L450 430M860 605L650 430"/><circle cx="220" cy="160" r="67"/><circle cx="880" cy="160" r="67"/><circle cx="240" cy="605" r="67"/><circle cx="860" cy="605" r="67"/><path d="M190 170Q220 130 250 170M850 170Q880 130 910 170M210 615Q240 575 270 615M830 615Q860 575 890 615"/>',
+      music: '<circle cx="620" cy="380" r="265"/><circle cx="620" cy="380" r="210"/><circle cx="620" cy="380" r="165"/><circle cx="620" cy="380" r="72"/><circle cx="620" cy="380" r="12" fill="currentColor"/><path d="M30 380H100L135 260 175 515 215 195 255 565 295 275 335 465 370 380H430M685 130Q820 170 865 305M390 475Q455 600 585 635"/>'
     };
     const fileName = pagePath.split('/').pop() || 'index.html';
     const mediaMatch = pagePath.match(/\/media\/([a-z-]+)\.html$/);
@@ -58,7 +76,7 @@
     const caseThemes = ['projects', 'research', 'experience', 'courses'];
     const ambientTheme = mediaMatch && Object.hasOwn(ambientThemes, mediaMatch[1]) ? mediaMatch[1]
       : isCaseStudy ? caseThemes[pageSeed % caseThemes.length]
-      : ({ 'index.html': 'home', 'research.html': 'research', 'projects.html': 'projects', 'media.html': 'media', 'contact.html': 'contact' })[fileName] || 'home';
+      : ({ 'index.html': 'home', 'research.html': 'research', 'projects.html': 'projects', 'education.html': 'education', 'skills.html': 'skills', 'experience.html': 'career', 'references.html': 'references', 'media.html': 'media', 'contact.html': 'contact' })[fileName] || 'home';
     document.body.dataset.ambientTheme = isCaseStudy ? `case-${fileName.replace('.html', '')}` : ambientTheme;
     const scene = document.createElement('div');
     scene.className = 'ambient-scene';
@@ -78,7 +96,12 @@
       gallery: { name: 'ambient-gallery-mobile', duration: 39 },
       documents: { name: 'ambient-documents-hover', duration: 42 },
       posts: { name: 'ambient-posts-wave', duration: 32 },
-      links: { name: 'ambient-links-revolve', duration: 52 }
+      links: { name: 'ambient-links-revolve', duration: 52 },
+      education: { name: 'ambient-education-open', duration: 47 },
+      skills: { name: 'ambient-skills-assemble', duration: 43 },
+      career: { name: 'ambient-career-climb', duration: 39 },
+      references: { name: 'ambient-references-connect', duration: 49 },
+      music: { name: 'ambient-music-groove', duration: 42 }
     };
     const caseMotionProfiles = {
       'rhizo-ptx-control-dashboard.html': { name: 'ambient-rhizo-regulate', duration: 45 },
@@ -107,48 +130,13 @@
       scene.append(layer);
     });
     document.body.prepend(scene);
-    let backgroundMotion = 'auto';
-    try {
-      const savedMotion = localStorage.getItem('madvid-background-motion');
-      if (['auto', 'on', 'off'].includes(savedMotion)) backgroundMotion = savedMotion;
-      else if (localStorage.getItem('madvid-background-paused') === 'true') backgroundMotion = 'off';
-    } catch { /* Storage is optional. */ }
-    const ambientControls = document.createElement('div');
-    ambientControls.className = 'ambient-controls container';
-    const ambientLabel = document.createElement('label');
-    ambientLabel.htmlFor = 'background-motion';
-    ambientLabel.textContent = 'Background motion';
-    const ambientSelect = document.createElement('select');
-    ambientSelect.id = 'background-motion';
-    ambientSelect.setAttribute('aria-describedby', 'background-motion-status');
-    [['auto', 'Auto'], ['on', 'On'], ['off', 'Off']].forEach(([value, label]) => {
-      const option = document.createElement('option');
-      option.value = value;
-      option.textContent = label;
-      ambientSelect.append(option);
-    });
-    const ambientStatus = document.createElement('span');
-    ambientStatus.id = 'background-motion-status';
-    ambientStatus.className = 'ambient-motion-status';
-    ambientStatus.setAttribute('aria-live', 'polite');
-    ambientControls.append(ambientLabel, ambientSelect, ambientStatus);
-    const pageMain = document.querySelector('main');
-    if (pageMain) pageMain.before(ambientControls);
-    else header?.after(ambientControls);
+    // Background decoration is always enabled. Reduced-motion users receive
+    // slower page-specific movement; hidden pages never continue animating.
     function updateBackgroundMotion() {
-      const enabled = backgroundMotion === 'on' || (backgroundMotion === 'auto' && !reducedMotion.matches);
-      scene.dataset.motion = backgroundMotion;
-      scene.dataset.paused = String(document.hidden || !enabled);
-      ambientSelect.value = backgroundMotion;
-      ambientStatus.textContent = backgroundMotion === 'auto'
-        ? (reducedMotion.matches ? 'System preference: still' : 'System preference: gentle motion')
-        : (backgroundMotion === 'on' ? 'Gentle motion enabled' : 'Still artwork');
+      scene.dataset.motion = 'on';
+      scene.dataset.reduced = String(reducedMotion.matches);
+      scene.dataset.paused = String(document.hidden);
     }
-    ambientSelect.addEventListener('change', () => {
-      backgroundMotion = ambientSelect.value;
-      try { localStorage.setItem('madvid-background-motion', backgroundMotion); } catch { /* Storage is optional. */ }
-      updateBackgroundMotion();
-    });
     document.addEventListener('visibilitychange', updateBackgroundMotion);
     reducedMotion.addEventListener('change', updateBackgroundMotion);
     window.addEventListener('pageshow', updateBackgroundMotion);
@@ -193,7 +181,7 @@
       const candidates = [...document.querySelectorAll([
         '.hero-text', '.hero-aside', '.research-hero', '.media-page > header', '.project-hero', '.page-heading',
         '.section > h2', '.section > h3', '.section-heading', '.research-section > h2', '.media-section > h2',
-        '.card', '.edu', '.research-spotlight', '.metric-card', '.research-method', '.research-figure',
+        '.card', '.edu', '.overview-card', '.research-spotlight', '.metric-card', '.research-method', '.research-figure',
         '.media-figure', '.experience-media-card', '.public-link-card', '.contact-with-copy', '.contact-card', '.timeline .item', '.result-chart'
       ].join(', '))];
       const candidateSet = new Set(candidates);
@@ -226,6 +214,8 @@
     document.addEventListener('visibilitychange', () => { if (document.hidden) stopMotion(); });
 
     if (header && nav) {
+      const moreMenus = [...nav.querySelectorAll('details.nav-more')];
+      const closeMoreMenus = () => moreMenus.forEach((menu) => { menu.open = false; });
       nav.id ||= 'primary-navigation';
       const toggle = document.createElement('button');
       toggle.type = 'button';
@@ -241,14 +231,23 @@
         toggle.setAttribute('aria-expanded', String(open));
         toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
         if (open && mobile.matches) enter(nav);
+        if (!open) closeMoreMenus();
         if (restoreFocus) toggle.focus();
       }
       toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
       nav.addEventListener('click', (event) => { if (event.target.closest('a')) setMenu(false); });
       document.addEventListener('keydown', (event) => {
+        const openMore = moreMenus.find((menu) => menu.open);
+        if (event.key === 'Escape' && openMore) {
+          event.preventDefault();
+          openMore.open = false;
+          openMore.querySelector('summary')?.focus();
+          return;
+        }
         if (event.key === 'Escape' && header.classList.contains('is-menu-open')) setMenu(false, true);
       });
       document.addEventListener('click', (event) => {
+        moreMenus.forEach((menu) => { if (!menu.contains(event.target)) menu.open = false; });
         if (mobile.matches && !header.contains(event.target)) setMenu(false);
       });
       mobile.addEventListener('change', () => setMenu(false));
@@ -256,8 +255,13 @@
 
       nav.querySelectorAll('a[href]').forEach((link) => {
         const url = new URL(link.href, window.location.href);
-        if (samePage(url) && !url.hash) link.setAttribute('aria-current', 'page');
+        if (samePage(url) && !url.hash) {
+          link.setAttribute('aria-current', 'page');
+          const containingMenu = link.closest('.nav-more');
+          if (containingMenu) containingMenu.dataset.current = 'true';
+        }
       });
+      moreMenus.forEach((menu) => { menu.dataset.current = String(Boolean(menu.querySelector('[aria-current]'))); });
     }
 
     // Keep keyboard focus and the URL aligned with in-page navigation.

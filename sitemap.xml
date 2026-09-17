@@ -7,39 +7,51 @@
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
-    <loc>https://madvidd.github.io/madvid/projects.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-09-17</lastmod>
-  </url>
-  <url>
     <loc>https://madvidd.github.io/madvid/research.html</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
-    <loc>https://madvidd.github.io/madvid/projects/rhizo-ptx-control-dashboard.html</loc>
+    <loc>https://madvidd.github.io/madvid/projects.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
-    <loc>https://madvidd.github.io/madvid/projects/imeche-uas-challenge-2026.html</loc>
+    <loc>https://madvidd.github.io/madvid/education.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
-    <loc>https://madvidd.github.io/madvid/projects/battery-soc-soh-estimation.html</loc>
+    <loc>https://madvidd.github.io/madvid/experience.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-08-05</lastmod>
+    <priority>0.9</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/skills.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/references.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/media.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/media/courses.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
@@ -57,12 +69,6 @@
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-supervised-ml-certificate.jpg</image:loc><image:title>Supervised Machine Learning: Regression and Classification certificate awarded to Seyed Mohammad Salehi</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-advanced-learning-algorithms-certificate.jpg</image:loc><image:title>Advanced Learning Algorithms certificate awarded to Seyed Mohammad Salehi</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-unsupervised-learning-certificate.jpg</image:loc><image:title>Unsupervised Learning, Recommenders, Reinforcement Learning certificate awarded to Seyed Mohammad Salehi</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://madvidd.github.io/madvid/media/courses.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/media/experience.html</loc>
@@ -93,8 +99,6 @@
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/uas-challenge-2026.jpg</image:loc><image:title>IMechE UAS Challenge 2026</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-mosfet-switch.jpg</image:loc><image:title>MOSFET Controlled Switch</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/rhizo-npn-switch.jpg</image:loc><image:title>Low-side NPN Switch</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/stage-crew-refreshers-week.jpg</image:loc><image:title>Surrey Stage Crew Refresher's Week Representative</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/stage-crew-musical-theatre-social.jpg</image:loc><image:title>Surrey Stage Crew and Musical Theatre Societies' Social</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/head-representative.jpg</image:loc><image:title>Head Reps — Computer Science and Electronic Engineering Head Representative</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/course-representative.jpg</image:loc><image:title>Computer Vision, Robotics, and Machine Learning MSc FT Course Rep</image:title></image:image>
   </url>
@@ -116,7 +120,6 @@
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ili-course-description.jpg</image:loc><image:title>Iran Language Institute — course description and 630-hour structure</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/ielts-teacher-training.jpg</image:loc><image:title>IELTS Teacher Training Course — 32 hours, Shahid Beheshti University</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/photoshop-sbu-certificate.jpg</image:loc><image:title>Adobe Photoshop — Shahid Beheshti University (shared redacted certificate)</image:title></image:image>
-    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/electronic-music-production-certificate.jpg</image:loc><image:title>Electronic Music Production — theory 100/100, total 89/100</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/photoshop-tvto-certificate.jpg</image:loc><image:title>Adobe Photoshop — TVTO, total 78/100</image:title></image:image>
   </url>
   <url>
@@ -133,7 +136,41 @@
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
+    <loc>https://madvidd.github.io/madvid/media/music.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-09-17</lastmod>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/music/switch-angel.jpg</image:loc><image:title>Photo shared with my Instagram post: Meeting Switch Angel</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/music/san-holo.jpg</image:loc><image:title>Photo shared with my Instagram post: Meeting San Holo</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/music/doctor-p-flux-pavilion.jpg</image:loc><image:title>Photo shared with my Instagram post: Meeting Doctor P &amp; Flux Pavilion</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/music/hamdi.jpg</image:loc><image:title>Photo shared with my Instagram post: A birthday meeting with Hamdi</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/music/droeloe.jpg</image:loc><image:title>Photo shared with my Instagram post: Meeting DROELOE</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/music/skantia.jpg</image:loc><image:title>Photo shared with my Instagram post: Meeting Skantia</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/music/bitbird-family.jpg</image:loc><image:title>Photo shared with my Instagram post: Bitbird family</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/stage-crew-refreshers-week.jpg</image:loc><image:title>Surrey Stage Crew Refresher's Week Representative</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/stage-crew-musical-theatre-social.jpg</image:loc><image:title>Surrey Stage Crew and Musical Theatre Societies' Social</image:title></image:image>
+    <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/electronic-music-production-certificate.jpg</image:loc><image:title>Electronic Music Production — theory 100/100, total 89/100</image:title></image:image>
+  </url>
+  <url>
     <loc>https://madvidd.github.io/madvid/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/projects/rhizo-ptx-control-dashboard.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/projects/imeche-uas-challenge-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://madvidd.github.io/madvid/projects/battery-soc-soh-estimation.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-09-17</lastmod>

@@ -41,7 +41,7 @@ section[id], article[id], div[id] { scroll-margin-top: var(--header-offset); }
 /* Page-specific line sculptures remain behind text and move on the compositor.
    Motion is continuous, optional, and paused when the document is hidden. */
 .ambient-scene { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; contain: strict; color: var(--brand-strong); }
-main, .site-footer, .ambient-controls { position: relative; z-index: 1; }
+main, .site-footer { position: relative; z-index: 1; }
 .ambient-layer { position: absolute; width: min(76vw, 1020px); aspect-ratio: 1100 / 760; pointer-events: none; transform: rotate(var(--art-angle, 0deg)); transform-origin: center; animation: var(--art-motion, ambient-home-tide) var(--art-duration, 40s) ease-in-out var(--art-delay, 0s) infinite var(--art-direction, normal); will-change: transform; }
 .ambient-layer svg { display: block; width: 100%; height: 100%; max-width: none; }
 .ambient-layer-1 { top: 4%; right: -13%; opacity: .44; }
@@ -60,10 +60,6 @@ main, .site-footer, .ambient-controls { position: relative; z-index: 1; }
 .ambient-scene[data-theme="documents"] .ambient-layer-1 { top: 5%; right: -12%; }
 .ambient-scene[data-theme="posts"] .ambient-layer-1 { top: 12%; right: -10%; }
 .ambient-scene[data-theme="links"] .ambient-layer-1 { top: 1%; right: -12%; }
-.ambient-controls { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: .45rem .65rem; padding-block: .55rem; color: var(--muted); font-size: .69rem; }
-.ambient-controls label { font-weight: 600; }
-.ambient-controls select { min-height: 34px; padding: .3rem 1.7rem .3rem .65rem; border: 1px solid #c8dfea; border-radius: 7px; color: var(--ink); background: #fff; font-size: .7rem; }
-.ambient-motion-status { font-size: .65rem; }
 @keyframes ambient-home-tide {
   0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--art-angle, 0deg)); }
   50% { transform: translate3d(-42px, 26px, 0) rotate(calc(var(--art-angle, 0deg) + 4deg)); }
@@ -136,6 +132,26 @@ main, .site-footer, .ambient-controls { position: relative; z-index: 1; }
   0%, 100% { transform: translate3d(0, 12px, 0) rotate(calc(var(--art-angle, 0deg) - 2deg)) scale(.985); }
   50% { transform: translate3d(-15px, -12px, 0) rotate(calc(var(--art-angle, 0deg) + 2deg)) scale(1.035); }
 }
+@keyframes ambient-education-open {
+  0%, 100% { transform: translate3d(-10px, 8px, 0) rotate(calc(var(--art-angle, 0deg) - 2deg)) scale(.99); }
+  50% { transform: translate3d(12px, -22px, 0) rotate(calc(var(--art-angle, 0deg) + 2deg)) scale(1.02); }
+}
+@keyframes ambient-skills-assemble {
+  0%, 100% { transform: translate3d(-18px, 8px, 0) rotate(calc(var(--art-angle, 0deg) - 3deg)); }
+  50% { transform: translate3d(18px, -16px, 0) rotate(calc(var(--art-angle, 0deg) + 3deg)); }
+}
+@keyframes ambient-career-climb {
+  0%, 100% { transform: translate3d(-16px, 16px, 0) rotate(var(--art-angle, 0deg)); }
+  50% { transform: translate3d(20px, -24px, 0) rotate(calc(var(--art-angle, 0deg) + 2deg)); }
+}
+@keyframes ambient-references-connect {
+  0%, 100% { transform: translate3d(12px, 8px, 0) rotate(calc(var(--art-angle, 0deg) - 4deg)); }
+  50% { transform: translate3d(-12px, -16px, 0) rotate(calc(var(--art-angle, 0deg) + 4deg)); }
+}
+@keyframes ambient-music-groove {
+  0%, 100% { transform: translate3d(-8px, 10px, 0) rotate(calc(var(--art-angle, 0deg) - 7deg)); }
+  50% { transform: translate3d(12px, -12px, 0) rotate(calc(var(--art-angle, 0deg) + 7deg)); }
+}
 
 /* Navigation is available before JavaScript enhances the mobile menu. */
 .site-header { position: sticky; top: 0; z-index: 60; background: rgba(246, 251, 255, .96); border-bottom: 1px solid var(--line); backdrop-filter: blur(18px); }
@@ -150,6 +166,16 @@ main, .site-footer, .ambient-controls { position: relative; z-index: 1; }
 .nav a:hover, .nav a[aria-current], .nav a.is-active { color: var(--ink); background: var(--brand); }
 .nav-toggle { display: none; align-items: center; justify-content: center; gap: .55rem; min-height: 44px; padding: .5rem .8rem; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 10px; font-size: .85rem; font-weight: 600; }
 .nav-toggle svg { width: 18px; height: 18px; }
+.nav-more { position: relative; }
+.nav-more > summary { display: flex; align-items: center; justify-content: space-between; gap: .55rem; min-height: 44px; padding: .55rem .85rem; list-style: none; border-radius: 9px; cursor: pointer; color: var(--muted); font-size: .84rem; font-weight: 600; }
+.nav-more > summary::-webkit-details-marker { display: none; }
+.nav-more > summary:hover, .nav-more[open] > summary, .nav-more[data-current="true"] > summary { color: var(--ink); background: var(--brand); }
+.nav-more > summary > span { font-size: 1rem; line-height: 1; }
+.nav-more-menu { position: absolute; top: calc(100% + .5rem); right: 0; display: grid; min-width: 235px; padding: .55rem; border: 1px solid #d2e5f2; border-radius: 14px; background: #fff; box-shadow: 0 14px 40px rgba(15, 43, 60, .12); }
+.nav-more-menu a { justify-content: flex-start; font-size: .82rem; border-radius: 7px; }
+.footer-links { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem 1rem; }
+.footer-links a { font-size: .74rem; text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
 
 /* Editorial introduction with an uncropped portrait. */
 .hero { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(240px, .75fr); align-items: center; gap: clamp(2rem, 6vw, 6rem); padding-block: clamp(3rem, 6vw, 6.5rem); }
@@ -177,6 +203,23 @@ main, .site-footer, .ambient-controls { position: relative; z-index: 1; }
 main > .section + .section { border-top: 1px solid var(--line); }
 .section > h2, .section > h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 0 0 1.8rem; }
 .section > p { max-width: 82ch; }
+.profile-page { max-width: 1220px; padding-block: 2rem 4rem; }
+.profile-page > .page-heading { max-width: 850px; margin: 1.8rem 0 2.5rem; }
+.profile-section { padding-block: 2rem; }
+.profile-section + .profile-section { border-top: 1px solid var(--line); margin-top: 1rem; }
+.profile-section > h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 1.6rem; }
+.profile-section > p { max-width: 80ch; color: var(--muted); }
+.profile-section .contact-card { min-height: 165px; gap: .45rem; }
+.profile-section .contact-card > strong { font-size: 1.1rem; }
+.profile-section .list.two-col { font-size: .93rem; line-height: 1.8; }
+.profile-section .list.two-col li { padding-bottom: 1rem; }
+.overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.3rem; }
+.overview-card { display: flex; flex-direction: column; gap: .6rem; min-width: 0; padding: 1.65rem; border: 1px solid var(--line); border-radius: 18px; background: #fff; color: var(--ink); text-decoration: none; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.overview-number { color: var(--link); font-size: .7rem; letter-spacing: .1em; font-weight: 600; }
+.overview-card h3 { display: flex; justify-content: space-between; gap: 1rem; font-size: 1.2rem; margin: .1rem 0; }
+.overview-card h3 > span { color: var(--link); font-size: 1rem; font-weight: 400; }
+.overview-card p { color: var(--muted); font-size: .86rem; line-height: 1.8; margin: 0; }
+.overview-card:hover { transform: translateY(-3px); border-color: #aad0eb; box-shadow: var(--shadow); }
 .section-heading { margin-bottom: 1.8rem; max-width: 82ch; }
 .section-heading h2, .section-heading h3 { margin: .5rem 0 .6rem; font-size: clamp(1.6rem, 3vw, 2.1rem); }
 .section-heading p:last-child { margin: 0; color: var(--muted); }
@@ -399,6 +442,33 @@ main > .section + .section { border-top: 1px solid var(--line); }
 .experience-media-body .media-actions { grid-column: 1 / -1; padding-top: .4rem; }
 .featured-link-card { border-color: #c3dff2; background: #eef8ff; }
 .spotify-embed { display: block; width: 100%; height: 352px; border: 0; border-radius: 12px; margin-top: .5rem; }
+.music-page { max-width: 1240px; padding-block: 2rem 4rem; }
+.music-hero { padding-block: 1rem 2.5rem; max-width: 900px; }
+.music-hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); margin: .7rem 0 1rem; }
+.music-hero > p { max-width: 72ch; color: var(--muted); }
+.music-featured { padding-block: 2rem 3rem; border-block: 1px solid var(--line); }
+.music-feature-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: start; gap: 2rem; }
+.music-feature-grid > * { min-width: 0; }
+.music-feature-grid h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-top: 0; }
+.music-page .instagram-embed { position: relative; width: 100%; min-width: 0; max-width: 100%; overflow: hidden; contain: inline-size; border-radius: 16px; background: #fff; }
+/* Instagram adds inline sizing after replacing its blockquote. Constrain that
+   replacement independently so it cannot enlarge the grid or the viewport. */
+.music-page .instagram-embed .instagram-media,
+.music-page .instagram-embed iframe,
+.music-page .instagram-embed iframe.instagram-media { display: block; box-sizing: border-box !important; width: 100% !important; min-width: 0 !important; max-width: 100% !important; margin: 0 !important; }
+.music-page .instagram-embed iframe { position: static !important; inset: auto !important; float: none !important; border: 0; }
+.music-page .instagram-embed iframe:not([src]),
+.music-page .instagram-embed iframe[src=""],
+.music-page .instagram-embed iframe[src="about:blank"] { display: none !important; }
+.instagram-fallback { margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); line-height: 1.7; overflow-wrap: anywhere; }
+.instagram-fallback a { display: inline-block; margin-top: .4rem; font-weight: 600; }
+.music-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
+.music-post { margin: 0; min-width: 0; }
+.music-post img { display: block; width: 100%; height: auto; object-fit: contain; }
+.music-post figcaption { padding: 1.15rem 1.25rem; color: var(--muted); font-size: .83rem; line-height: 1.75; }
+.music-post blockquote, .music-feature-grid .card > blockquote:not(.instagram-media) { margin: .7rem 0 1rem; padding-left: .85rem; border-left: 2px solid var(--brand-strong); color: var(--muted); font-size: .88rem; line-height: 1.8; }
+.music-post .media-actions { padding-top: .5rem; }
+.music-post-meta { color: var(--muted); font-size: .76rem !important; }
 .linkedin-video-embed { display: block; width: 100%; height: auto; aspect-ratio: 504 / 399; min-height: 320px; border: 0; border-radius: 12px; margin-top: .75rem; background: #edf6fc; }
 
 /* Progressive motion: ordinary navigation remains native in every browser. */
@@ -455,6 +525,11 @@ main :where(p, li, h2, h3, h4, figcaption, .media-actions, .breadcrumbs) a:not(.
   .site-header .brand { flex: 1; }
   .nav { width: 100%; justify-content: flex-start; border-top: 1px solid var(--line); padding-top: .6rem; }
   .nav a { flex: 1; justify-content: center; }
+  .nav-more { flex: 1; }
+  .nav-more > summary { justify-content: center; }
+  .nav-more-menu { right: 0; }
+  .overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .music-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav-enhanced .nav-toggle { display: inline-flex; }
   .nav-enhanced .nav { display: none; }
   .nav-enhanced.is-menu-open .nav { display: flex; }
@@ -474,8 +549,6 @@ main :where(p, li, h2, h3, h4, figcaption, .media-actions, .breadcrumbs) a:not(.
   .ambient-scene[data-theme="research"] .ambient-layer-1 { width: 145vw; top: 13%; right: -52% !important; opacity: .4; }
   .ambient-layer-2 { bottom: -9%; left: -55%; opacity: .19; }
   .ambient-layer-3 { display: none; }
-  .ambient-controls { justify-content: flex-start; gap: .4rem .6rem; }
-  .ambient-motion-status { flex-basis: 100%; font-size: .62rem; }
   .media-directory-grid { grid-template-columns: minmax(0, 1fr); gap: .9rem; }
   .media-directory-grid .public-link-card { min-height: 96px; padding: 1.3rem 1.5rem; }
   .container { padding-inline: 1.25rem; }
@@ -486,6 +559,14 @@ main :where(p, li, h2, h3, h4, figcaption, .media-actions, .breadcrumbs) a:not(.
   .nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav-enhanced.is-menu-open .nav { display: grid; }
   .nav a { min-height: 44px; justify-content: flex-start; padding-inline: .85rem; }
+  .nav-more { grid-column: 1 / -1; }
+  .nav-more > summary { justify-content: space-between; font-size: .8rem; }
+  .nav-more-menu { position: static; min-width: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: .5rem; box-shadow: none; }
+  .nav-more-menu a { min-width: 0; }
+  .overview-grid, .music-photo-grid, .music-feature-grid { grid-template-columns: minmax(0, 1fr); }
+  .profile-page, .music-page { padding-top: 1.4rem; }
+  .profile-page > .page-heading { margin-top: 1.3rem; }
+  .profile-section { padding-block: 1.5rem; }
   .hero { display: flex; flex-direction: column; align-items: stretch; padding-block: 3rem; gap: 2.5rem; }
   .hero h1 { max-width: 15ch; font-size: clamp(2.7rem, 10vw, 4rem); }
   .hero p { font-size: .94rem; }
@@ -562,12 +643,13 @@ main :where(p, li, h2, h3, h4, figcaption, .media-actions, .breadcrumbs) a:not(.
   :where(.btn, .nav-toggle, .research-tab, [data-project-filter], .card, .edu, .research-spotlight, .metric-card, .research-method, .research-figure, .media-figure, .experience-media-card, .public-link-card, .contact-card, .contact-with-copy, .nav a, .section-links a, .media-jump-links a, .research-toc a):is(:hover, :active) { transform: none !important; }
   .reading-progress { display: none; }
 }
-/* A deliberate On selection overrides the system preference for the background
-   only. Other interface effects continue to respect reduced motion. */
-.ambient-scene[data-motion="on"] .ambient-layer { animation: var(--art-motion, ambient-home-tide) var(--art-duration, 40s) ease-in-out var(--art-delay, 0s) infinite var(--art-direction, normal) !important; will-change: transform; }
+/* Decorative motion is continuous. Reduced-motion mode slows each page's own
+   movement to 40% speed; other UI motion still respects the OS setting. */
+.ambient-scene .ambient-layer { animation: var(--art-motion, ambient-home-tide) var(--art-duration, 40s) ease-in-out var(--art-delay, 0s) infinite var(--art-direction, normal) !important; will-change: transform; }
+.ambient-scene[data-reduced="true"] .ambient-layer { animation-duration: calc(var(--art-duration, 40s) * 2.5) !important; }
 .ambient-scene[data-paused="true"] .ambient-layer { animation-play-state: paused !important; }
 @media print {
-  .ambient-scene, .ambient-controls { display: none !important; }
+  .ambient-scene { display: none !important; }
   .site-header, .site-footer, .nav-toggle, #backToTop, .copy-email, .research-toc, .project-filters, .reading-progress { display: none !important; }
   body { background: #fff; color: #000; }
   .container { max-width: none; padding: 0; }
