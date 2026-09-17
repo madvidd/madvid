@@ -4,19 +4,19 @@
     <loc>https://madvidd.github.io/madvid/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/projects.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/media.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/IMechE_UAS_Challenge_2026_Certificate.jpg</image:loc><image:title>IMechE UAS Challenge 2026 certificate — Seyed Mohammad Salehi</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-supervised-ml-certificate.jpg</image:loc><image:title>Supervised Machine Learning certificate — Seyed Mohammad Salehi</image:title></image:image>
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/coursera-advanced-learning-algorithms-certificate.jpg</image:loc><image:title>Advanced Learning Algorithms certificate — Seyed Mohammad Salehi</image:title></image:image>
@@ -40,19 +40,19 @@
     <loc>https://madvidd.github.io/madvid/projects/human-motion-prediction.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/projects/rhizo-ptx-control-dashboard.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/projects/imeche-uas-challenge-2026.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://madvidd.github.io/madvid/projects/battery-soc-soh-estimation.html</loc>
