@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260917-research" />
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Seyed Mohammad Salehi">
   <meta property="og:title" content="Seyed Mohammad Salehi | Computer Vision, Robotics &amp; Machine Learning">
@@ -56,7 +56,7 @@
         "alternateName": ["Seyed Salehi", "Madvid", "madvidd"],
         "url": "https://madvidd.github.io/madvid/",
         "image": "https://madvidd.github.io/madvid/assets/avatar.jpg",
-        "description": "Robotics engineer, AI/ML engineer and researcher, electrical/electronics engineer, and University of Surrey M.Sc. graduate in computer vision, robotics and machine learning.",
+        "description": "Robotics engineer, AI/ML engineer and researcher, electrical/electronics engineer, and University of Surrey M.Sc. graduate with Distinction in computer vision, robotics and machine learning.",
         "jobTitle": ["Robotics Engineer", "AI/ML Engineer/Researcher", "Electrical/Electronics Engineer"],
         "email": "mailto:ss06053@surrey.ac.uk",
         "address": {"@type": "PostalAddress", "addressLocality": "London", "addressRegion": "Greater London", "addressCountry": "GB"},
@@ -64,7 +64,7 @@
           {"@type": "CollegeOrUniversity", "name": "University of Surrey", "url": "https://www.surrey.ac.uk/"},
           {"@type": "CollegeOrUniversity", "name": "Shahid Beheshti University"}
         ],
-        "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "Master's degree", "name": "M.Sc. Computer Vision, Robotics and Machine Learning — Distinction", "description": "Final module average excluding thesis: 70.13%; thesis mark pending.", "recognizedBy": {"@type": "CollegeOrUniversity", "name": "University of Surrey", "url": "https://www.surrey.ac.uk/"}},
+        "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "Master's degree", "name": "M.Sc. Computer Vision, Robotics and Machine Learning — Distinction, 70.13%", "recognizedBy": {"@type": "CollegeOrUniversity", "name": "University of Surrey", "url": "https://www.surrey.ac.uk/"}},
         "knowsAbout": ["Computer Vision", "Robotics", "Machine Learning", "Human Motion Prediction", "Embedded Systems", "PID Control", "Signal Processing", "Electronic Circuit Design", "ROS 2", "SLAM", "PyTorch", "MLOps", "PCB Design", "DJing", "Music Production"],
         "knowsLanguage": ["Persian", "English", "German"],
         "sameAs": ["https://www.linkedin.com/in/madvid", "https://github.com/madvidd", "https://www.instagram.com/madvidmusic", "https://www.youtube.com/@Madvid-d3r", "https://open.spotify.com/artist/7qfcySRiM7dCJlEYMCBhA5", "https://soundcloud.com/madvidmusic", "https://linktr.ee/madvid"]
@@ -86,14 +86,10 @@
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#extras">More</a>
-        <a href="#references">References</a>
-        <a href="#contact">Contact</a>
+        <a href="research.html">Research</a>
         <a href="projects.html">Projects</a>
         <a href="media.html">Media &amp; Links</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -102,13 +98,40 @@
     <div id="top"></div>
     <section id="hero" class="hero container">
       <div class="hero-text">
+        <p class="hero-kicker">Robotics &middot; Artificial intelligence &middot; Electronics</p>
         <h1>Hi, I’m Seyed Mohammad Salehi.</h1>
-        <p>I&rsquo;m a robotics engineer, AI/ML engineer and researcher, and electrical/electronics engineer. I&rsquo;m a University of Surrey M.Sc. graduate in Computer Vision, Robotics and Machine Learning, combining experimental ML research with robotics, control, embedded firmware and electronics. My work spans motion forecasting, autonomous systems, PID and safety logic, UAV flight control, STM32 development, circuit design, system testing and hardware-software integration.</p>
+        <p class="hero-role">Intelligent systems, from research to reality.</p>
+        <p>I&rsquo;m a robotics engineer, AI/ML engineer and researcher, and electrical/electronics engineer. I graduated with <strong>Distinction</strong> from the University of Surrey&rsquo;s M.Sc. in Computer Vision, Robotics and Machine Learning.</p>
+        <p>I connect experimental machine learning with autonomous systems, control, embedded firmware and electronic hardware.</p>
         <div class="hero-cta">
-          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="research.html">Explore my research <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn ghost" href="#contact">Let&rsquo;s connect</a>
           <a class="btn ghost" href="assets/Salehi_CV.pdf" download>Download CV</a>
+        </div>
+        <div class="hero-facts"><span>London, UK</span><span>M.Sc. Distinction &middot; 70.13%</span><span>University of Surrey</span></div>
+        <div class="hero-cta">
           <a class="btn ghost" href="https://www.linkedin.com/in/madvid" target="_blank" rel="noopener me">LinkedIn</a>
           <a class="btn ghost" href="https://github.com/madvidd" target="_blank" rel="noopener me">GitHub</a>
+        </div>
+      </div>
+      <aside class="hero-aside">
+        <img class="hero-portrait" src="assets/avatar.jpg" alt="Seyed Mohammad Salehi" width="520" height="670" decoding="async" fetchpriority="high" />
+        <p>Research curiosity.<br />Engineering practice.</p>
+      </aside>
+    </section>
+
+    <section id="research" class="section container" aria-labelledby="research-heading">
+      <div class="research-spotlight">
+        <div class="spotlight-copy">
+          <p class="eyebrow">Research &middot; M.Sc. dissertation</p>
+          <h2 id="research-heading">Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting</h2>
+          <p>How should a forecasting model use confidence, physical relationships and memory as new observations arrive? My research tests that question through controlled studies of SEAM and SHARP on Argoverse 2.</p>
+          <a class="btn" href="research.html">Read the research &amp; explore results <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="spotlight-meta">
+          <p><strong>5</strong> controlled study families</p>
+          <p><strong>25</strong> indexed model records</p>
+          <p>Supervised by<br /><strong>Professor Saber Fallah</strong><br />and <strong>Professor Kevin Wells</strong></p>
         </div>
       </div>
     </section>
@@ -117,6 +140,8 @@
       <h3>About</h3>
       <p><strong>Based in:</strong> London, UK</p>
       <p>I bridge hardware and software to turn research ideas into reliable working systems, from machine-learning models and control algorithms to embedded firmware and custom electronic circuits.</p>
+      <p>My work spans motion forecasting, autonomous systems, PID and safety logic, UAV flight control, STM32 development, circuit design, system testing and hardware-software integration.</p>
+      <nav class="media-jump-links" aria-label="Explore my background"><a href="#skills">Technical skills</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#extras">Certificates &amp; activities</a><a href="#references">References</a></nav>
       <ul class="tags">
         <li>Artificial Intelligence</li>
         <li>Machine &amp; Deep Learning</li>
@@ -201,12 +226,11 @@
       <h3>Education</h3>
       <div class="list">
         <div class="edu">
-          <h4>M.Sc. Computer Vision, Robotics &amp; Machine Learning &mdash; Distinction</h4>
+          <h4>M.Sc. Computer Vision, Robotics &amp; Machine Learning &mdash; Distinction, <strong>70.13%</strong></h4>
           <p><span>University of Surrey &middot; Guildford, UK</span> &middot; <time>September 2025 &ndash; September 2026</time></p>
           <ul>
             <li><strong>Thesis:</strong> Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting.</li>
-            <li>Benchmarked DeMo, SEAM and SHARP on the full Argoverse 2 dataset and extended SHARP with Mamba state-space encoders and controlled attention ablations, assessing accuracy, efficiency, robustness and failure behaviour.</li>
-            <li><strong>Final module average excluding thesis: 70.13%.</strong> Thesis mark pending.</li>
+            <li>Graduated with Distinction. Investigated uncertainty-aware context, relative geometry, attention normalisation and Mamba state-space placement in SEAM and SHARP on Argoverse 2. <a href="research.html">Explore the dissertation and results</a>.</li>
             <li><strong>Module marks:</strong> Applied Machine Learning 85; Robotics 78; Research, Professionalism and Innovation 75; Computer Vision and Pattern Recognition 70 (coursework 100/100); Medical Robotics 67; Advanced Topics in Computer Vision and Deep Learning 62.</li>
             <li><strong>Coursework:</strong> Speech &amp; Audio Processing &amp; Recognition 98/100.</li>
           </ul>
@@ -267,10 +291,6 @@
 
       <h3 class="mt">Featured Project Case Studies</h3>
       <div class="grid two featured-projects">
-        <a class="contact-card" href="projects/human-motion-prediction.html">
-          <strong>Streaming Motion Forecasting</strong>
-          <span>M.Sc. research on uncertainty-aware attention, geometry and state-space modelling with DeMo, SEAM, SHARP, Mamba and Argoverse 2.</span>
-        </a>
         <a class="contact-card" href="projects/rhizo-ptx-control-dashboard.html">
           <strong>Rhizo PTX Integrated Control Dashboard</strong>
           <span>PID control, safety logic, electronic switching and software integration.</span>
@@ -332,12 +352,11 @@
         <a class="contact-card" href="https://linktr.ee/madvid" target="_blank" rel="noopener me"><strong>Linktree</strong><span>madvid</span></a>
         <div class="contact-card"><strong>Phone</strong><span>+44 7584 070723</span></div>
       </div>
-      <p class="muted">Last updated 17 September 2026.</p>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container"><p>© 2026 Seyed Mohammad Salehi · <a href="media.html">Media &amp; Links</a> · <a href="sitemap.xml">Sitemap</a></p></div></footer>
+  <footer class="site-footer"><div class="container"><p>© 2026 Seyed Mohammad Salehi · <a href="research.html">Research</a> · <a href="projects.html">Projects</a> · <a href="media.html">Media &amp; Links</a> · <a href="sitemap.xml">Sitemap</a></p></div></footer>
   <button id="backToTop" aria-label="Back to top">↑</button>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20260917-research" defer></script>
 </body>
 </html>

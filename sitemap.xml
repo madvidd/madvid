@@ -37,9 +37,9 @@
     <image:image><image:loc>https://madvidd.github.io/madvid/assets/linkedin/halow-logo.jpg</image:loc><image:title>halow Project logo</image:title></image:image>
   </url>
   <url>
-    <loc>https://madvidd.github.io/madvid/projects/human-motion-prediction.html</loc>
+    <loc>https://madvidd.github.io/madvid/research.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>

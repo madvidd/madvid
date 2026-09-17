@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research | Uncertainty-Aware Motion Forecasting | Seyed Mohammad Salehi</title>
+  <meta name="description" content="MSc research by Seyed Mohammad Salehi: uncertainty-aware attention, geometry and state-space modelling for streaming motion forecasting in SEAM and SHARP." />
+  <meta name="author" content="Seyed Mohammad Salehi" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#d7ecff" />
+  <link rel="canonical" href="https://madvidd.github.io/madvid/research.html" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260917-research" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Seyed Mohammad Salehi" />
+  <meta property="og:title" content="Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting" />
+  <meta property="og:description" content="Explore the dissertation, methods and controlled SEAM/SHARP results. MSc research supervised by Professor Saber Fallah and Professor Kevin Wells." />
+  <meta property="og:url" content="https://madvidd.github.io/madvid/research.html" />
+  <meta property="og:image" content="https://madvidd.github.io/madvid/assets/research/graphical-abstract.png" />
+  <meta property="og:image:alt" content="Graphical abstract of SEAM and SHARP streaming motion forecasting studies" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Streaming Motion Forecasting | Seyed Mohammad Salehi" />
+  <meta name="twitter:description" content="Controlled research on uncertainty, geometry, attention and selective state-space models for streaming motion forecasting." />
+  <meta name="twitter:image" content="https://madvidd.github.io/madvid/assets/research/graphical-abstract.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://madvidd.github.io/madvid/research.html",
+        "url": "https://madvidd.github.io/madvid/research.html",
+        "name": "Research — Seyed Mohammad Salehi",
+        "description": "Methods, results and reproducible evidence from MSc research in streaming motion forecasting.",
+        "mainEntity": {"@id": "https://madvidd.github.io/madvid/research.html#thesis"},
+        "isPartOf": {"@id": "https://madvidd.github.io/madvid/#website"},
+        "dateModified": "2026-09-17"
+      },
+      {
+        "@type": "Thesis",
+        "@id": "https://madvidd.github.io/madvid/research.html#thesis",
+        "name": "Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting",
+        "author": {"@type": "Person", "@id": "https://madvidd.github.io/madvid/#person", "name": "Seyed Mohammad Salehi"},
+        "contributor": [
+          {"@type": "Person", "name": "Professor Saber Fallah"},
+          {"@type": "Person", "name": "Professor Kevin Wells"}
+        ],
+        "sourceOrganization": {"@type": "CollegeOrUniversity", "name": "University of Surrey"},
+        "inSupportOf": "M.Sc. Computer Vision, Robotics and Machine Learning",
+        "datePublished": "2026",
+        "inLanguage": "en-GB",
+        "url": "https://madvidd.github.io/madvid/research.html",
+        "encoding": {"@type": "MediaObject", "contentUrl": "https://madvidd.github.io/madvid/assets/research/Salehi_MSc_Dissertation.pdf", "encodingFormat": "application/pdf"},
+        "about": ["Streaming motion forecasting", "Uncertainty-aware attention", "Relative geometry", "Mamba state-space models", "SEAM", "SHARP", "Argoverse 2"],
+        "citation": "https://github.com/madvidd/Salehi-MSc-Thesis"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://madvidd.github.io/madvid/"},
+          {"@type": "ListItem", "position": 2, "name": "Research", "item": "https://madvidd.github.io/madvid/research.html"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html#top">
+        <img class="avatar" src="assets/avatar.jpg" alt="Portrait of Seyed Mohammad Salehi" width="52" height="67" decoding="async" />
+        <div class="brand-text"><span class="brand-name">Seyed Mohammad Salehi</span><p>Computer Vision, Robotics, ML &amp; Embedded Systems</p></div>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#about">About</a><a href="research.html" aria-current="page">Research</a><a href="projects.html">Projects</a><a href="media.html">Media &amp; Links</a><a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="container research-page">
+    <header class="research-hero" id="thesis">
+      <p class="research-kicker">Research / M.Sc. dissertation / University of Surrey</p>
+      <h1>Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting</h1>
+      <p class="research-lead">Better predictions depend on where a model puts its attention, geometry and memory. I investigate how these mechanisms interact as autonomous systems update their predictions over time.</p>
+      <p class="project-meta">Seyed Mohammad Salehi &middot; September 2026 &middot; Graduated with Distinction</p>
+      <div class="research-supervisors">
+        <p><span>First supervisor</span><strong>Professor Saber Fallah</strong><a href="mailto:s.fallah@surrey.ac.uk">s.fallah@surrey.ac.uk</a></p>
+        <p><span>Second supervisor</span><strong>Professor Kevin Wells</strong><a href="https://www.surrey.ac.uk/people/kevin-wells" target="_blank" rel="noopener">University of Surrey profile <span aria-hidden="true">&nearr;</span></a></p>
+      </div>
+      <div class="research-actions">
+        <a class="btn" href="assets/research/Salehi_MSc_Dissertation.pdf">Read the dissertation <span aria-hidden="true">&nearr;</span></a>
+        <a class="btn ghost" href="#results">Explore the results <span aria-hidden="true">&darr;</span></a>
+        <a class="btn ghost" href="https://github.com/madvidd/Salehi-MSc-Thesis" target="_blank" rel="noopener">Code &amp; evidence on GitHub</a>
+      </div>
+    </header>
+    <div class="research-layout">
+      <nav class="research-toc" aria-label="Research sections">
+        <p class="eyebrow">On this page</p>
+        <a href="#overview">01 / Overview</a>
+        <a href="#methods">02 / Methods</a>
+        <a href="#results">03 / Results explorer</a>
+        <a href="#insights">04 / Findings</a>
+        <a href="#limitations">05 / Scope &amp; next steps</a>
+        <a href="#resources">06 / Read &amp; reproduce</a>
+      </nav>
+      <div class="research-content">
+        <section id="overview" class="research-section">
+          <p class="eyebrow">01 / The research question</p>
+          <h2>What should a streaming predictor remember?</h2>
+          <p>A road user can turn, slow down or change direction as new observations arrive. A streaming forecasting system must update several plausible futures without discarding useful context or treating stale predictions as certainty.</p>
+          <p>My dissertation studies <strong>SEAM</strong>, with endpoint-aware context and future prediction, and <strong>SHARP</strong>, with short observation windows and instance-aware memory. I implemented and evaluated targeted changes while preserving their core streaming pathways.</p>
+          <p>The contribution is a controlled map of <strong>which mechanism helps, at which location, under which protocol</strong>. Five study families on Argoverse 2 connect 25 indexed model records to configurations, selected checkpoints, evaluation outputs and training-time evidence.</p>
+          <div class="research-metrics">
+            <article class="metric-card"><span>SEAM &middot; QKNorm</span><strong>3.27%</strong><p>lower selected minADE6<br />14.84% more training time</p></article>
+            <article class="metric-card"><span>SEAM &middot; Future-head Mamba</span><strong>2.17%</strong><p>lower selected minADE6<br />4.1% more training time</p></article>
+            <article class="metric-card"><span>SHARP &middot; Combined mechanisms</span><strong>+0.19%</strong><p>higher minADE6<br />Four secondary metrics improved</p></article>
+          </div>
+          <p class="research-caption">Each change is relative to its own study control. These are single-seed observations, not a shared leaderboard or a claim of statistical significance.</p>
+          <details class="research-callout">
+            <summary>View the dissertation&rsquo;s graphical abstract</summary>
+            <figure class="research-figure">
+              <a href="assets/research/graphical-abstract.svg" target="_blank" rel="noopener" aria-label="Open the graphical abstract at full resolution"><img src="assets/research/graphical-abstract.svg" alt="Graphical abstract showing the five SEAM and SHARP study families and their separate minADE6 results" width="840" height="1100" loading="lazy" decoding="async" /></a>
+              <figcaption>All five study families and their principal findings. <a href="assets/research/graphical-abstract.svg" target="_blank" rel="noopener">Open full-size figure</a>.</figcaption>
+            </figure>
+          </details>
+        </section>
+        <section id="methods" class="research-section">
+          <p class="eyebrow">02 / Methods &amp; implementation</p>
+          <h2>Four mechanisms. Two streaming architectures.</h2>
+          <p>Each intervention changes a specific part of the information flow. Separate controls distinguish the effect of a component from its placement and from its interaction with other components.</p>
+          <div class="research-method-grid">
+            <details class="research-method"><summary>Uncertainty-aware context</summary><p>Previous modal probabilities and entropy condition the context used for a target prediction. In SEAM, the continuous feature gain is trainable, but the hard selection boundary remains at 30 m because its Boolean mask has no ordinary data gradient. This is evidence for confidence-conditioned gain, not learned radius expansion.</p></details>
+            <details class="research-method"><summary>Relative geometry</summary><p>Pairwise displacement, distance and heading relationships contribute a learned bias to scene-attention scores. This adds explicit physical relationships to how existing agents and lane tokens interact.</p></details>
+            <details class="research-method"><summary>Query&ndash;Key Normalisation</summary><p>QKNorm normalises queries and keys within each head and learns their similarity scale. The study preserves values, masks and attention topology, separating relevance-score normalisation from Talking-Heads cross-head mixing.</p></details>
+            <details class="research-method"><summary>Mamba state-space placement</summary><p>Selective recurrence processes ordered agent histories or mode-specific future coordinates. The experiments compare residual additions with replacement at specific locations: SEAM benefits from future-head recurrence, while SHARP favours a residual agent-history path on its selected primary metric.</p></details>
+          </div>
+          <div class="grid two">
+            <article class="card"><h3>SEAM</h3><p>Two families examine state-space integration and independent context/attention interventions. Endpoint-conditioned retrieval and trajectory relay remain part of the architecture.</p><a href="assets/research/seam-interventions.svg" target="_blank" rel="noopener">Explore the intervention diagram <span aria-hidden="true">&nearr;</span></a></article>
+            <article class="card"><h3>SHARP</h3><p>Architectural screening, attention operators and integration studies examine short-window encoding and instance-aware memory. Placement and composition are evaluated separately.</p><a href="assets/research/sharp-architecture.svg" target="_blank" rel="noopener">Explore the architecture diagram <span aria-hidden="true">&nearr;</span></a></article>
+          </div>
+          <figure class="research-figure">
+            <a href="assets/research/streaming-overview.svg" target="_blank" rel="noopener" aria-label="Open SHARP streaming architecture diagram at full resolution"><img src="assets/research/streaming-overview.svg" alt="Successive observation windows share a SHARP encoder, carrying instance-aware context forward while updating future trajectories" width="1800" height="980" loading="lazy" decoding="async" /></a>
+            <figcaption>Streaming prediction updates the forecast while carrying context across observation windows. Original dissertation diagram. <a href="assets/research/streaming-overview.svg" target="_blank" rel="noopener">Open full size</a>.</figcaption>
+          </figure>
+        </section>
+        <section id="results" class="research-section">
+          <p class="eyebrow">03 / Interactive results</p>
+          <h2>Explore the evidence, one study at a time.</h2>
+          <p><strong>minADE6</strong> measures the average trajectory error of the best of six predicted futures, in metres. Lower is better. Choose a comparison to inspect its selected validation scores and recorded training duration.</p>
+          <div class="research-tabs" aria-label="Choose a research comparison" hidden>
+            <button class="research-tab" type="button" data-study="seam-context">SEAM · Context</button>
+            <button class="research-tab" type="button" data-study="seam-mamba">SEAM · Mamba</button>
+            <button class="research-tab" type="button" data-study="sharp-attention">SHARP · Attention</button>
+            <button class="research-tab" type="button" data-study="sharp-screen">SHARP · Ablation</button>
+            <button class="research-tab" type="button" data-study="sharp-placement">SHARP · Placement</button>
+            <button class="research-tab" type="button" data-study="sharp-composition">SHARP · Combined</button>
+          </div>
+          <div class="results-controls" hidden>
+            <label for="result-view">Chart view</label>
+            <select id="result-view"><option value="score">Prediction error (metres)</option><option value="change">Error change vs reference (%)</option><option value="time">Recorded training time (hours)</option></select>
+          </div>
+          <div id="result-chart" class="result-chart" aria-live="polite" hidden></div>
+          <section class="research-panel" id="seam-context" aria-labelledby="seam-context-title">
+            <p class="eyebrow">20 epochs · 3 GPUs · global batch 48 · seed 2333</p>
+            <h3 id="seam-context-title">SEAM: context and attention</h3>
+            <p>QKNorm gives the largest selected-error reduction in this study. Confidence-conditioned context offers a smaller gain with a much smaller increase in recorded training time.</p>
+            <div class="result-table-wrap" tabindex="0" role="region" aria-label="SEAM: context and attention results">
+              <table class="result-table">
+                <caption>Selected validation minADE6 and recorded training duration. Lower error is better.</caption>
+                <thead><tr><th scope="col">Configuration</th><th scope="col">minADE6 (m)</th><th scope="col">Error change</th><th scope="col">Training (h)</th></tr></thead>
+                <tbody>
+                  <tr data-label="Baseline" data-score="0.727668" data-hours="15.612777777777778"><th scope="row">Baseline</th><td>0.727668</td><td>Reference</td><td>15.61</td></tr>
+                  <tr data-label="Uncertainty-aware context" data-score="0.708755" data-hours="15.67361111111111"><th scope="row">Uncertainty-aware context</th><td>0.708755</td><td>-2.60%</td><td>15.67</td></tr>
+                  <tr data-label="Relative geometry" data-score="0.717261" data-hours="15.750555555555556"><th scope="row">Relative geometry</th><td>0.717261</td><td>-1.43%</td><td>15.75</td></tr>
+                  <tr data-label="QKNorm" data-score="0.703845" data-hours="17.92972222222222"><th scope="row">QKNorm</th><td>0.703845</td><td>-3.27%</td><td>17.93</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="research-caption">Geometry selects epoch 18 (0.717261); its final epoch-19 minADE6 is 0.718735. The other selected epochs are 19. These selection scores must not be substituted into a different checkpoint’s full metric vector.</p>
+            <p class="research-caption"><a href="https://github.com/madvidd/Salehi-MSc-Thesis/tree/main/Studies/SEAM/Context_Attention_Ablation" target="_blank" rel="noopener">Code &amp; retained evidence</a> &middot; Dissertation Tables 4.4–4.5</p>
+          </section>
+          <section class="research-panel" id="seam-mamba" aria-labelledby="seam-mamba-title">
+            <p class="eyebrow">80 epochs · 2 GPUs · global batch 32 · seed 2333</p>
+            <h3 id="seam-mamba-title">SEAM: where should Mamba go?</h3>
+            <p>Replacing the future-coordinate head with Mamba reduces selected minADE6 by 2.17%. All six common final-epoch metrics improve. Adding Mamba to agent history gives a mixed result.</p>
+            <div class="result-table-wrap" tabindex="0" role="region" aria-label="SEAM: where should Mamba go? results">
+              <table class="result-table">
+                <caption>Selected validation minADE6 and recorded training duration. Lower error is better.</caption>
+                <thead><tr><th scope="col">Configuration</th><th scope="col">minADE6 (m)</th><th scope="col">Error change</th><th scope="col">Training (h)</th></tr></thead>
+                <tbody>
+                  <tr data-label="Baseline" data-score="0.662859" data-hours="70.51666666666667"><th scope="row">Baseline</th><td>0.662859</td><td>Reference</td><td>70.52</td></tr>
+                  <tr data-label="Agent-history Mamba" data-score="0.664814" data-hours="74.96666666666667"><th scope="row">Agent-history Mamba</th><td>0.664814</td><td>+0.29%</td><td>74.97</td></tr>
+                  <tr data-label="Future-head Mamba" data-score="0.64848" data-hours="73.38333333333334"><th scope="row">Future-head Mamba</th><td>0.648480</td><td>-2.17%</td><td>73.38</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="research-caption">The table shows selected minADE6. Baseline and history select epoch 77; future-head Mamba selects epoch 79. The dissertation’s common six-metric vectors come from final epoch 79. Training durations are rounded to minutes.</p>
+            <p class="research-caption"><a href="https://github.com/madvidd/Salehi-MSc-Thesis/tree/main/Studies/SEAM/State_Space_Integration" target="_blank" rel="noopener">Code &amp; retained evidence</a> &middot; Dissertation Tables 4.2–4.3</p>
+          </section>
+          <section class="research-panel" id="sharp-attention" aria-labelledby="sharp-attention-title">
+            <p class="eyebrow">80 epochs · 3 GPUs · global batch 24 · seed 2333</p>
+            <h3 id="sharp-attention-title">SHARP: attention operators</h3>
+            <p>QKNorm lowers selected minADE6 by 0.55%. Talking-Heads and the combined operator do not improve this primary metric; the combined operator’s recorded training duration is about double the baseline.</p>
+            <div class="result-table-wrap" tabindex="0" role="region" aria-label="SHARP: attention operators results">
+              <table class="result-table">
+                <caption>Selected validation minADE6 and recorded training duration. Lower error is better.</caption>
+                <thead><tr><th scope="col">Configuration</th><th scope="col">minADE6 (m)</th><th scope="col">Error change</th><th scope="col">Training (h)</th></tr></thead>
+                <tbody>
+                  <tr data-label="Standard attention (MHA)" data-score="0.67346" data-hours="99.65"><th scope="row">Standard attention (MHA)</th><td>0.673460</td><td>Reference</td><td>99.65</td></tr>
+                  <tr data-label="QKNorm" data-score="0.669777" data-hours="118.68333333333334"><th scope="row">QKNorm</th><td>0.669777</td><td>-0.55%</td><td>118.68</td></tr>
+                  <tr data-label="Talking-Heads" data-score="0.674991" data-hours="118.11666666666666"><th scope="row">Talking-Heads</th><td>0.674991</td><td>+0.23%</td><td>118.12</td></tr>
+                  <tr data-label="QKNorm + Talking-Heads" data-score="0.674492" data-hours="199.9"><th scope="row">QKNorm + Talking-Heads</th><td>0.674492</td><td>+0.15%</td><td>199.90</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="research-caption">MHA selects epoch 66, QKNorm 65 and both Talking-Heads variants 71. The MHA secondary vector is from final epoch 79. The combined operator also used a smaller microbatch with gradient accumulation; this affects execution and normalisation comparability.</p>
+            <p class="research-caption"><a href="https://github.com/madvidd/Salehi-MSc-Thesis/tree/main/Studies/SHARP/Attention_Operators" target="_blank" rel="noopener">Code &amp; retained evidence</a> &middot; Dissertation Tables 4.9–4.10</p>
+          </section>
+          <section class="research-panel" id="sharp-screen" aria-labelledby="sharp-screen-title">
+            <p class="eyebrow">20 epochs · 4 GPUs · global batch 32 · 13 warm-up epochs</p>
+            <h3 id="sharp-screen-title">SHARP: nine isolated architectural changes</h3>
+            <p>Relative geometry and uncertainty-aware context improve the primary selection metric. The other seven changes do not. This short-budget screen identifies candidates for follow-up, rather than a ranking of converged models.</p>
+            <div class="result-table-wrap" tabindex="0" role="region" aria-label="SHARP: nine isolated architectural changes results">
+              <table class="result-table">
+                <caption>Selected validation minADE6 and recorded training duration. Lower error is better.</caption>
+                <thead><tr><th scope="col">Configuration</th><th scope="col">minADE6 (m)</th><th scope="col">Error change</th><th scope="col">Training (h)</th></tr></thead>
+                <tbody>
+                  <tr data-label="Baseline" data-score="0.752339" data-hours="35.21666666666667"><th scope="row">Baseline</th><td>0.752339</td><td>Reference</td><td>35.22</td></tr>
+                  <tr data-label="Memory gate" data-score="0.755349" data-hours="33.166666666666664"><th scope="row">Memory gate</th><td>0.755349</td><td>+0.40%</td><td>33.17</td></tr>
+                  <tr data-label="Cross-window consistency" data-score="0.776207" data-hours="28.783333333333335"><th scope="row">Cross-window consistency</th><td>0.776207</td><td>+3.17%</td><td>28.78</td></tr>
+                  <tr data-label="Learned temporal pooling" data-score="0.757637" data-hours="34.53333333333333"><th scope="row">Learned temporal pooling</th><td>0.757637</td><td>+0.70%</td><td>34.53</td></tr>
+                  <tr data-label="Uncertainty-aware context" data-score="0.749961" data-hours="30.483333333333334"><th scope="row">Uncertainty-aware context</th><td>0.749961</td><td>-0.32%</td><td>30.48</td></tr>
+                  <tr data-label="Relative geometry" data-score="0.749679" data-hours="38.43333333333333"><th scope="row">Relative geometry</th><td>0.749679</td><td>-0.35%</td><td>38.43</td></tr>
+                  <tr data-label="Kinematic stem" data-score="0.785164" data-hours="37.55"><th scope="row">Kinematic stem</th><td>0.785164</td><td>+4.36%</td><td>37.55</td></tr>
+                  <tr data-label="Endpoint refinement" data-score="0.755898" data-hours="37.88333333333333"><th scope="row">Endpoint refinement</th><td>0.755898</td><td>+0.47%</td><td>37.88</td></tr>
+                  <tr data-label="Lane topology" data-score="0.754238" data-hours="37.75"><th scope="row">Lane topology</th><td>0.754238</td><td>+0.25%</td><td>37.75</td></tr>
+                  <tr data-label="Temporal Mamba replacement" data-score="0.78019" data-hours="46.15"><th scope="row">Temporal Mamba replacement</th><td>0.780190</td><td>+3.70%</td><td>46.15</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="research-caption">All variants use seed 2333. Thirteen of the twenty epochs are warm-up. Selected scores and historical secondary metric summaries do not establish a common reevaluation of every selected checkpoint.</p>
+            <p class="research-caption"><a href="https://github.com/madvidd/Salehi-MSc-Thesis/tree/main/Studies/SHARP/Architecture_Ablation" target="_blank" rel="noopener">Code &amp; retained evidence</a> &middot; Dissertation Tables 4.7–4.8</p>
+          </section>
+          <section class="research-panel" id="sharp-placement" aria-labelledby="sharp-placement-title">
+            <p class="eyebrow">80 epochs · 4 GPUs · global batch 32</p>
+            <h3 id="sharp-placement-title">SHARP: sequence placement matters</h3>
+            <p>Moving residual recurrence from scene tokens to chronological agent history lowers selected minADE6 by 0.97% relative to scene-token Mamba. These results make placement an important part of the architectural choice.</p>
+            <div class="result-table-wrap" tabindex="0" role="region" aria-label="SHARP: sequence placement matters results">
+              <table class="result-table">
+                <caption>Selected validation minADE6 and recorded training duration. Lower error is better.</caption>
+                <thead><tr><th scope="col">Configuration</th><th scope="col">minADE6 (m)</th><th scope="col">Error change</th><th scope="col">Training (h)</th></tr></thead>
+                <tbody>
+                  <tr data-label="Scene-token Mamba" data-score="0.680362" data-hours="129.28333333333333"><th scope="row">Scene-token Mamba</th><td>0.680362</td><td>Reference</td><td>129.28</td></tr>
+                  <tr data-label="Temporal-agent Mamba" data-score="0.673736" data-hours="160.33333333333334"><th scope="row">Temporal-agent Mamba</th><td>0.673736</td><td>-0.97%</td><td>160.33</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="research-caption">The separate local baseline is 0.679282, giving a 0.82% reduction for agent-history Mamba in the dissertation comparison. Here the relative-change chart uses scene-token Mamba as the placement comparator. Agent-history selected minADE6 differs from its rounded later-epoch full vector; training durations are approximate.</p>
+            <p class="research-caption"><a href="https://github.com/madvidd/Salehi-MSc-Thesis/tree/main/Studies/SHARP/State_Space_Integration" target="_blank" rel="noopener">Code &amp; retained evidence</a> &middot; Dissertation Tables 4.11–4.12</p>
+          </section>
+          <section class="research-panel" id="sharp-composition" aria-labelledby="sharp-composition-title">
+            <p class="eyebrow">80 epochs · 4 training GPUs · global batch 32 · selected checkpoints reevaluated on 1 GPU</p>
+            <h3 id="sharp-composition-title">SHARP: useful parts do not guarantee a better whole</h3>
+            <p>Combining QKNorm, uncertainty-aware context and geometry slightly increases minADE6 by 0.19%, while improving four secondary metrics. Training takes 20.83% longer despite adding only 621 parameters.</p>
+            <div class="result-table-wrap" tabindex="0" role="region" aria-label="SHARP: useful parts do not guarantee a better whole results">
+              <table class="result-table">
+                <caption>Selected validation minADE6 and recorded training duration. Lower error is better.</caption>
+                <thead><tr><th scope="col">Configuration</th><th scope="col">minADE6 (m)</th><th scope="col">Error change</th><th scope="col">Training (h)</th></tr></thead>
+                <tbody>
+                  <tr data-label="Baseline" data-score="0.679282" data-hours="125.70388888888888"><th scope="row">Baseline</th><td>0.679282</td><td>Reference</td><td>125.70</td></tr>
+                  <tr data-label="QKNorm + uncertainty + geometry" data-score="0.680589" data-hours="151.88888888888889"><th scope="row">QKNorm + uncertainty + geometry</th><td>0.680589</td><td>+0.19%</td><td>151.89</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="research-caption">Baseline selects epoch 78 and the combined model epoch 79. Both are independently evaluated with batch 32 on the same AV2 validation split. Miss rate decreases from 0.155955 to 0.155515; the result is mixed, with no primary-metric improvement. Training durations exclude the separate final checkpoint evaluation.</p>
+            <p class="research-caption"><a href="https://github.com/madvidd/Salehi-MSc-Thesis/tree/main/Studies/SHARP/Architecture_Integration" target="_blank" rel="noopener">Code &amp; retained evidence</a> &middot; Dissertation Tables 4.13–4.14</p>
+          </section>
+          <details class="research-callout">
+            <summary>How to interpret these comparisons</summary>
+            <p>Training budgets, batch sizes and hardware differ between study families. Compare configurations within a panel. Timing records include the study&rsquo;s training, validation and execution overhead; they do not measure inference latency.</p>
+            <p>The primary score is checkpoint-selection minADE6. Some historical full vectors come from a different epoch. Those vectors are not mixed into the selection scores shown here. Percentages in this explorer are calculated from the displayed six-decimal scores; the dissertation retains full-precision values.</p>
+          </details>
+        </section>
+        <section id="insights" class="research-section">
+          <p class="eyebrow">04 / What the experiments show</p>
+          <h2>Placement and interaction shape the outcome.</h2>
+          <div class="research-method-grid">
+            <article class="card"><h3>Recurrence needs the right sequence</h3><p>SEAM&rsquo;s future-head replacement improves all six final-epoch metrics, while history addition gives a mixed vector. SHARP&rsquo;s ordered-history residual path outperforms scene-token placement on selected minADE6. Neither result supports replacing attention everywhere.</p></article>
+            <article class="card"><h3>Accuracy and cost are separate questions</h3><p>SEAM uncertainty-aware context reduces selected error by 2.60% with a 0.39% increase in recorded training time. QKNorm reaches a larger error reduction but costs 14.84% more time in that study. Parameter count alone does not explain execution cost.</p></article>
+            <article class="card"><h3>Independent gains are not additive</h3><p>SHARP&rsquo;s combined QKNorm, uncertainty and geometry model improves miss rate, Brier-minFDE6 and both endpoint metrics, yet slightly worsens both ADE measures. Joint evaluation is essential before claiming a better overall predictor.</p></article>
+            <article class="card"><h3>Evidence should remain inspectable</h3><p>The contribution includes implementation packages, retained configuration and checkpoint records, metric comparisons, execution timings and original figures. Each result keeps its own baseline and evaluation context.</p></article>
+          </div>
+        </section>
+        <section id="limitations" class="research-section">
+          <p class="eyebrow">05 / Scope &amp; next steps</p>
+          <h2>Promising choices, with precise boundaries.</h2>
+          <p>These experiments evaluate open-loop motion forecasting on Argoverse 2. Single-seed outcomes identify configurations worth confirming; they do not establish universal rankings, calibrated confidence, on-vehicle latency or closed-loop safety.</p>
+          <details><summary>Reproduction and selection</summary><p>The local SHARP baseline reaches selected minADE6 0.679282, compared with 0.639000 in the article. Architectural changes are compared with the local control. Validation supports both candidate selection and checkpoint selection, so further seeds and paired scenario-level bootstrap intervals are needed for stronger claims.</p></details>
+          <details><summary>What remains to be evaluated</summary><p>The repository includes further combined extensions, but their gains cannot be inferred from the completed ablations. No unevaluated configuration is included as a result here. DeMo is a literature precedent in the dissertation, not a matched experimental control.</p></details>
+          <details><summary>Next research directions</summary><p>Repeat the strongest candidates across seeds, evaluate selected checkpoints consistently, isolate mechanism interactions in a factorial study, and test persistent state across updates. Follow-on work can assess confidence calibration, trajectory diversity, temporal consistency, planning behaviour and inference latency.</p></details>
+        </section>
+        <section id="resources" class="research-section">
+          <p class="eyebrow">06 / Read, inspect &amp; reproduce</p>
+          <h2>From the dissertation to the original evidence.</h2>
+          <div class="grid two research-sources">
+            <a class="contact-card" href="assets/research/Salehi_MSc_Dissertation.pdf"><strong>Full dissertation</strong><span>Methods, 26 tables, 23 numbered figures and a reproducibility appendix.</span><span>Read PDF <span aria-hidden="true">&nearr;</span></span></a>
+            <a class="contact-card" href="https://github.com/madvidd/Salehi-MSc-Thesis" target="_blank" rel="noopener"><strong>Research repository</strong><span>Study packages, implementations, configurations and retained results.</span><span>Explore GitHub <span aria-hidden="true">&nearr;</span></span></a>
+            <a class="contact-card" href="https://github.com/madvidd/Salehi-MSc-Thesis/blob/main/Results/README.md" target="_blank" rel="noopener"><strong>Results and comparison tables</strong><span>Within-study summaries with source paths and checkpoint conventions.</span><span>Inspect the results <span aria-hidden="true">&nearr;</span></span></a>
+            <a class="contact-card" href="https://github.com/madvidd/Salehi-MSc-Thesis/blob/main/Documentation/Reproduction.md" target="_blank" rel="noopener"><strong>Reproduction guide</strong><span>Data access, execution requirements and evidence boundaries.</span><span>Read the guide <span aria-hidden="true">&nearr;</span></span></a>
+          </div>
+          <p><a href="https://github.com/madvidd/Salehi-MSc-Thesis/blob/main/Results/Figures/Gallery.md" target="_blank" rel="noopener">View the complete research figure gallery</a> &middot; <a href="assets/research/Salehi_MSc_Dissertation.pdf" download>Download dissertation</a></p>
+          <div class="research-callout">
+            <h3>Cite this dissertation</h3>
+            <p id="research-citation">Salehi, S. M. (2026). Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting. MSc dissertation, University of Surrey.</p>
+            <button class="btn ghost" type="button" id="copy-citation" hidden>Copy citation</button><span id="citation-status" role="status"></span>
+          </div>
+          <p>Interested in motion forecasting, robotics or a research collaboration? <a href="mailto:ss06053@surrey.ac.uk">Get in touch</a>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><p>© 2026 Seyed Mohammad Salehi &middot; <a href="index.html">Home</a> &middot; <a href="research.html">Research</a> &middot; <a href="projects.html">Projects</a> &middot; <a href="media.html">Media &amp; Links</a> &middot; <a href="sitemap.xml">Sitemap</a></p></div></footer>
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  <script src="script.js?v=20260917-research" defer></script>
+  <script src="research.js?v=20260917-research" defer></script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engineering &amp; Research Projects | Seyed Mohammad Salehi</title>
-  <meta name="description" content="Research and engineering projects by Seyed Mohammad Salehi in human-motion prediction, UAV flight control, PID systems, computer vision, embedded electronics and battery state estimation.">
+  <title>Engineering Projects | Seyed Mohammad Salehi</title>
+  <meta name="description" content="Engineering projects by Seyed Mohammad Salehi in UAV flight control, PID systems, autonomous driving, embedded electronics and battery state estimation.">
   <meta name="author" content="Seyed Mohammad Salehi">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="theme-color" content="#d7ecff">
@@ -13,16 +13,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260917-research" />
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Seyed Mohammad Salehi">
-  <meta property="og:title" content="Engineering &amp; Research Projects | Seyed Mohammad Salehi">
+  <meta property="og:title" content="Engineering Projects | Seyed Mohammad Salehi">
   <meta property="og:description" content="Selected projects in autonomous navigation, control, embedded electronics, UAV systems and machine learning.">
   <meta property="og:url" content="https://madvidd.github.io/madvid/projects.html">
   <meta property="og:image" content="https://madvidd.github.io/madvid/assets/avatar.jpg">
   <meta property="og:image:alt" content="Portrait of Seyed Mohammad Salehi">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Engineering &amp; Research Projects | Seyed Mohammad Salehi">
+  <meta name="twitter:title" content="Engineering Projects | Seyed Mohammad Salehi">
   <meta name="twitter:description" content="Autonomous navigation, control, embedded electronics, UAV systems and machine-learning projects.">
   <meta name="twitter:image" content="https://madvidd.github.io/madvid/assets/avatar.jpg">
   <script type="application/ld+json">
@@ -31,13 +31,12 @@
     "@type": "CollectionPage",
     "@id": "https://madvidd.github.io/madvid/projects.html#collection",
     "url": "https://madvidd.github.io/madvid/projects.html",
-    "name": "Engineering and Research Projects by Seyed Mohammad Salehi",
-    "description": "Selected research and engineering projects in computer vision, robotics, machine learning, control and embedded systems.",
+    "name": "Engineering Projects by Seyed Mohammad Salehi",
+    "description": "Selected projects in robotics, machine learning, control, embedded electronics and battery state estimation.",
     "dateModified": "2026-09-17",
     "isPartOf": {"@id": "https://madvidd.github.io/madvid/#website"},
     "about": {"@id": "https://madvidd.github.io/madvid/#person"},
     "hasPart": [
-      {"@type": "TechArticle", "url": "https://madvidd.github.io/madvid/projects/human-motion-prediction.html", "name": "Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting"},
       {"@type": "TechArticle", "url": "https://madvidd.github.io/madvid/projects/rhizo-ptx-control-dashboard.html", "name": "Rhizo PTX Integrated Control Dashboard"},
       {"@type": "TechArticle", "url": "https://madvidd.github.io/madvid/projects/imeche-uas-challenge-2026.html", "name": "IMechE UAS Challenge 2026 — Team Peryton"},
       {"@type": "TechArticle", "url": "https://madvidd.github.io/madvid/projects/battery-soc-soh-estimation.html", "name": "Battery SOC and SOH Estimation"}
@@ -58,36 +57,29 @@
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="index.html#about">About</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#experience">Experience</a>
-        <a href="index.html#education">Education</a>
-        <a href="index.html#extras">More</a>
-        <a href="index.html#references">References</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="research.html">Research</a>
         <a href="projects.html" aria-current="page">Projects</a>
         <a href="media.html">Media &amp; Links</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main-content" class="container section">
     <div id="top"></div>
+    <p class="eyebrow">From models to working systems</p>
     <h1>Projects</h1>
-    <p>Selected research, control, embedded-systems and autonomous-robotics work.</p>
-    <div class="grid skills-grid">
-      <article class="card">
-        <h3><a class="card-title-link" href="projects/human-motion-prediction.html">Uncertainty-Aware Attention, Geometry and State-Space Modelling for Streaming Motion Forecasting</a></h3>
-        <p class="muted">M.Sc. thesis &middot; September 2025 &ndash; September 2026 &middot; Thesis mark pending</p>
-        <p>Research into efficient and trustworthy streaming motion forecasting for autonomous navigation in complex urban environments.</p>
-        <ul>
-          <li>Benchmarked DeMo, SEAM, and SHARP on the full Argoverse 2 dataset, comparing accuracy, efficiency, robustness, and failure behaviour.</li>
-          <li>Extended SHARP with Mamba state-space encoders and controlled attention ablations for temporal modelling.</li>
-          <li>Supervised by Professor Saber Fallah (first supervisor) and Professor Kevin Wells (second supervisor).</li>
-        </ul>
-        <ul class="tags"><li>Python</li><li>PyTorch</li><li>Argoverse 2</li><li>Mamba</li><li>Motion Prediction</li></ul><p class="card-link"><a href="projects/human-motion-prediction.html">Read the case study →</a></p>
-      </article>
-
-      <article class="card">
+    <p class="project-summary">Explore my work across control, robotics and machine learning, from electronic circuits and flight-control software to autonomous driving and battery estimation.</p>
+    <p>Looking for my M.Sc. thesis? <a href="research.html">Explore the Research page.</a></p>
+    <div class="project-filters" role="group" aria-label="Filter projects">
+      <button type="button" data-project-filter="all" aria-pressed="true" aria-controls="project-grid">All projects</button>
+      <button type="button" data-project-filter="control" aria-pressed="false" aria-controls="project-grid">Control</button>
+      <button type="button" data-project-filter="robotics" aria-pressed="false" aria-controls="project-grid">Robotics</button>
+      <button type="button" data-project-filter="machine-learning" aria-pressed="false" aria-controls="project-grid">Machine learning</button>
+    </div>
+    <p class="filter-status" data-filter-status role="status">5 projects</p>
+    <div id="project-grid" class="grid skills-grid project-grid">
+      <article class="card" data-project-category="control">
         <h3><a class="card-title-link" href="projects/rhizo-ptx-control-dashboard.html">Rhizo PTX Integrated Control Dashboard</a></h3>
         <p class="muted">Freelance Electrical Control Engineer &middot; iTEK project &middot; March 2026 &ndash; September 2026</p>
         <p>Designed a combined hardware and software control dashboard with operating feedback for safe, system-wide operation.</p>
@@ -99,7 +91,7 @@
         <ul class="tags"><li>PID Control</li><li>Electronics</li><li>Embedded Systems</li><li>Dashboard UI</li></ul><p class="card-link"><a href="projects/rhizo-ptx-control-dashboard.html">Read the case study →</a></p>
       </article>
 
-      <article class="card">
+      <article class="card" data-project-category="robotics control">
         <h3><a class="card-title-link" href="projects/imeche-uas-challenge-2026.html">IMechE UAS Challenge 2026 — Team Peryton</a></h3>
         <p class="muted">Team Peryton member &middot; University of Surrey &middot; September 2025 &ndash; Present</p>
         <p>Built and flew an unmanned aerial vehicle as part of a multidisciplinary competition team.</p>
@@ -111,7 +103,7 @@
         <ul class="tags"><li>UAV</li><li>Flight Control</li><li>Parameter Tuning</li><li>Circuit Design</li></ul><p class="card-link"><a href="projects/imeche-uas-challenge-2026.html">Read the case study →</a></p>
       </article>
 
-      <article class="card">
+      <article class="card" data-project-category="robotics machine-learning">
         <h3>Self-Driving Car Simulation</h3>
         <p class="muted">B.Sc. thesis · 2023</p>
         <p>Developed a simulation focused on perception and control for autonomous driving, awarded 92.5/100.</p>
@@ -123,7 +115,7 @@
         <ul class="tags"><li>Python</li><li>Computer Vision</li><li>MATLAB/Simulink</li><li>Control</li></ul>
       </article>
 
-      <article class="card">
+      <article class="card" data-project-category="machine-learning">
         <h3><a class="card-title-link" href="projects/battery-soc-soh-estimation.html">Battery SOC/SOH Estimation</a></h3>
         <p class="muted">Research work · 2024–2025</p>
         <p>Explored deep-learning approaches for lithium-ion battery state-of-charge and state-of-health estimation.</p>
@@ -135,7 +127,7 @@
         <ul class="tags"><li>Python</li><li>Deep Learning</li><li>Signal Processing</li><li>Jupyter</li></ul><p class="card-link"><a href="projects/battery-soc-soh-estimation.html">Read the case study →</a></p>
       </article>
 
-      <article class="card">
+      <article class="card" data-project-category="robotics">
         <h3>Educational Competition Robots</h3>
         <p class="muted">Sigma Company · 2020–2022</p>
         <p>Co-developed training kits and curricula for students preparing for robotics competitions.</p>
@@ -150,6 +142,7 @@
     <p class="mt"><a class="btn" href="index.html#contact">Get in touch</a> <a class="btn ghost" href="assets/Salehi_CV.pdf" download>Download CV</a></p>
   </main>
 
-  <footer class="site-footer"><div class="container"><p>© 2026 Seyed Mohammad Salehi · <a href="index.html">Home</a> · <a href="media.html">Media &amp; Links</a> · <a href="sitemap.xml">Sitemap</a></p></div></footer>
+  <footer class="site-footer"><div class="container"><p>© 2026 Seyed Mohammad Salehi · <a href="index.html">Home</a> · <a href="research.html">Research</a> · <a href="media.html">Media &amp; Links</a> · <a href="sitemap.xml">Sitemap</a></p></div></footer>
+  <script src="script.js?v=20260917-research" defer></script>
 </body>
 </html>
