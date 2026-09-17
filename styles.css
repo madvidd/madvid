@@ -296,6 +296,47 @@ main > .section + .section { border-top: 1px solid var(--line); }
 .experience-media-body .media-actions { grid-column: 1 / -1; padding-top: .4rem; }
 .featured-link-card { border-color: #c3dff2; background: #eef8ff; }
 .spotify-embed { display: block; width: 100%; height: 352px; border: 0; border-radius: 12px; margin-top: .5rem; }
+.linkedin-video-embed { display: block; width: 100%; height: auto; aspect-ratio: 504 / 399; min-height: 320px; border: 0; border-radius: 12px; margin-top: .75rem; background: #edf6fc; }
+
+/* Progressive motion: ordinary navigation remains native in every browser. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  .site-header { view-transition-name: site-header; }
+  ::view-transition-old(root) { animation: page-depart 180ms ease-out both; }
+  ::view-transition-new(root) { animation: page-arrive 340ms cubic-bezier(.2, .7, .2, 1) both; }
+  ::view-transition-old(site-header), ::view-transition-new(site-header) { animation-duration: 160ms; }
+}
+@keyframes page-depart { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes page-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.reading-progress { position: fixed; inset: 0 0 auto; z-index: 150; height: 2px; background: linear-gradient(90deg, var(--brand-strong), #2378b7); transform: scaleX(var(--reading-progress, 0)); transform-origin: left; pointer-events: none; }
+:where(a, button, summary, select) { transition: color .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.nav a, .section-links a, .media-jump-links a, .research-toc a { transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.brand-name { transition: color .2s ease; }
+:where(.card, .edu, .research-spotlight, .metric-card, .research-method, .research-figure, .media-figure, .experience-media-card, .public-link-card, .contact-with-copy) { transition: transform .26s cubic-bezier(.2, .7, .2, 1), border-color .26s ease, box-shadow .26s ease, background-color .26s ease; }
+:where(.hero h1, .research-hero h1, .section > h2, .section > h3, .section-heading h2, .research-section h2, .media-section h2, .project-section h2, .timeline h4, .hero-facts span, .tags li, .result-chart-row) { transition: color .2s ease, text-shadow .2s ease, background-color .2s ease, border-color .2s ease; }
+main :where(p, li, h2, h3, h4, figcaption, .media-actions, .breadcrumbs) a:not(.btn) { background-image: linear-gradient(var(--brand), var(--brand)); background-position: left 95%; background-repeat: no-repeat; background-size: 0% .45em; transition: background-size .24s ease, color .2s ease; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+main :where(p, li, h2, h3, h4, figcaption, .media-actions, .breadcrumbs) a:not(.btn):focus-visible { background-size: 100% .45em; }
+:where(.card, .edu, .research-spotlight, .research-method, .research-figure, .media-figure, .experience-media-card, .public-link-card, .contact-with-copy):focus-within { border-color: #8fc3e7; box-shadow: 0 8px 28px rgba(15, 43, 60, .08), 0 0 0 3px rgba(137, 200, 255, .15); }
+:where(.nav a, .section-links a, .media-jump-links a, .research-toc a, .nav-toggle, summary):focus-visible { color: var(--ink); background-color: #e3f2fc; }
+:where(.btn, .research-tab, [data-project-filter], select):focus-visible { box-shadow: 0 0 0 4px rgba(137, 200, 255, .24); }
+.research-section summary { border-radius: 11px; }
+.result-chart-row { border-radius: 5px; }
+
+@media (hover: hover) and (pointer: fine) {
+  :where(.card, .edu, .research-spotlight, .metric-card, .research-method, .research-figure, .media-figure, .experience-media-card, .public-link-card, .contact-with-copy):hover { border-color: #a6cfe9; box-shadow: 0 16px 38px rgba(15, 43, 60, .09), 0 0 0 1px rgba(137, 200, 255, .14); transform: translateY(-3px); }
+  .research-method[open]:hover, .research-figure:hover { transform: translateY(-1px); }
+  main :where(p, li, h2, h3, h4, figcaption, .media-actions, .breadcrumbs) a:not(.btn):hover { background-size: 100% .45em; }
+  :where(.hero h1, .research-hero h1, .section > h2, .section > h3, .section-heading h2, .research-section h2, .media-section h2, .project-section h2, .timeline h4):hover { color: var(--link); text-shadow: 0 3px 20px rgba(137, 200, 255, .35); }
+  .hero-facts span:hover, .tags li:hover { color: var(--link); background-color: #e0f1fe; }
+  .result-chart-row:hover { background-color: #eef7fe; }
+  :where(.nav-toggle, .research-section summary, .results-controls select):hover { background-color: #eaf6ff; border-color: #a6cfe9; }
+  :where(.nav a, .section-links a, .media-jump-links a, .research-toc a):hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(15, 43, 60, .05); }
+  .brand:hover .brand-name { color: var(--link); }
+  :where(.btn, .nav-toggle, .research-tab, [data-project-filter]):active { transform: translateY(1px); }
+}
+@media (hover: none), (pointer: coarse) {
+  .btn:hover, .contact-card:hover, .public-link-card:hover { transform: none; }
+}
 
 @media (min-width: 1440px) { .hero { padding-block: 6.5rem; } }
 @media (max-width: 1060px) {
@@ -404,9 +445,12 @@ main > .section + .section { border-top: 1px solid var(--line); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+  :where(.btn, .nav-toggle, .research-tab, [data-project-filter], .card, .edu, .research-spotlight, .metric-card, .research-method, .research-figure, .media-figure, .experience-media-card, .public-link-card, .contact-card, .contact-with-copy, .nav a, .section-links a, .media-jump-links a, .research-toc a):is(:hover, :active) { transform: none !important; }
+  .reading-progress { display: none; }
 }
 @media print {
-  .site-header, .site-footer, .nav-toggle, #backToTop, .copy-email, .research-toc, .project-filters { display: none !important; }
+  .site-header, .site-footer, .nav-toggle, #backToTop, .copy-email, .research-toc, .project-filters, .reading-progress { display: none !important; }
   body { background: #fff; color: #000; }
   .container { max-width: none; padding: 0; }
   .hero, .research-layout { display: block; }

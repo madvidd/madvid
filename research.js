@@ -80,13 +80,4 @@
   }
   window.addEventListener('hashchange', openLinkedStudy);
   openLinkedStudy();
-  const copy = document.getElementById('copy-citation');
-  if (copy && navigator.clipboard && window.isSecureContext) {
-    copy.hidden = false;
-    copy.addEventListener('click', async () => {
-      const status = document.getElementById('citation-status');
-      try { await navigator.clipboard.writeText(document.getElementById('research-citation').textContent.trim()); status.textContent = ' Citation copied.'; }
-      catch { status.textContent = ' Select the citation above to copy it.'; }
-    });
-  }
 })();

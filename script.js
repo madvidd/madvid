@@ -9,6 +9,80 @@
     const mobile = window.matchMedia('(max-width: 960px)');
     const currentPath = window.location.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
     const samePage = (url) => url.origin === window.location.origin && url.pathname.replace(/index\.html$/, '').replace(/\/$/, '') === currentPath;
+    const runningAnimations = new Set();
+    const visitedEntrances = new WeakSet();
+    let entranceObserver;
+
+    // WAAPI effects never leave content hidden or change its layout. Unsupported
+    // browsers, reduced-motion users and script failures keep the static page.
+    function animateMotion(element, frames, options = {}) {
+      if (reducedMotion.matches || !element?.animate || document.hidden) return;
+      const animation = element.animate(frames, {
+        duration: 420,
+        easing: 'cubic-bezier(.2, .7, .2, 1)',
+        ...options
+      });
+      runningAnimations.add(animation);
+      const release = () => runningAnimations.delete(animation);
+      animation.addEventListener('finish', release, { once: true });
+      animation.addEventListener('cancel', release, { once: true });
+      return animation;
+    }
+
+    function enter(element, delay = 0) {
+      animateMotion(element, [
+        { opacity: .55, transform: 'translateY(12px)' },
+        { opacity: 1, transform: 'translateY(0)' }
+      ], { delay });
+    }
+
+    function highlightDestination(target) {
+      const heading = target.matches('h1, h2, h3, h4') ? target : target.querySelector('h1, h2, h3, h4');
+      if (!heading) return;
+      animateMotion(heading, [
+        { backgroundColor: 'rgba(191, 227, 255, 0)' },
+        { backgroundColor: 'rgba(191, 227, 255, .65)', offset: .25 },
+        { backgroundColor: 'rgba(191, 227, 255, 0)' }
+      ], { duration: 1100, delay: 120 });
+    }
+
+    function observeEntrances() {
+      entranceObserver?.disconnect();
+      if (reducedMotion.matches || !('IntersectionObserver' in window)) return;
+      const candidates = [...document.querySelectorAll([
+        '.hero-text', '.hero-aside', '.research-hero', '.media-page > header', '.project-hero', '.page-heading',
+        '.section > h2', '.section > h3', '.section-heading', '.research-section > h2', '.media-section > h2',
+        '.card', '.edu', '.research-spotlight', '.metric-card', '.research-method', '.research-figure',
+        '.media-figure', '.experience-media-card', '.public-link-card', '.contact-with-copy', '.contact-card', '.timeline .item', '.result-chart'
+      ].join(', '))];
+      const candidateSet = new Set(candidates);
+      entranceObserver = new IntersectionObserver((entries) => {
+        let stagger = 0;
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entranceObserver.unobserve(entry.target);
+          if (visitedEntrances.has(entry.target)) return;
+          visitedEntrances.add(entry.target);
+          enter(entry.target, Math.min(stagger++ * 40, 160));
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+      candidates.forEach((element) => {
+        let parent = element.parentElement;
+        while (parent && !candidateSet.has(parent)) parent = parent.parentElement;
+        if (!parent && !visitedEntrances.has(element)) entranceObserver.observe(element);
+      });
+    }
+
+    function stopMotion() {
+      runningAnimations.forEach((animation) => animation.cancel());
+      runningAnimations.clear();
+    }
+    reducedMotion.addEventListener('change', () => {
+      stopMotion();
+      observeEntrances();
+    });
+    window.addEventListener('beforeprint', stopMotion);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) stopMotion(); });
 
     if (header && nav) {
       nav.id ||= 'primary-navigation';
@@ -25,6 +99,7 @@
         header.classList.toggle('is-menu-open', open);
         toggle.setAttribute('aria-expanded', String(open));
         toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        if (open && mobile.matches) enter(nav);
         if (restoreFocus) toggle.focus();
       }
       toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
@@ -47,7 +122,7 @@
     // Keep keyboard focus and the URL aligned with in-page navigation.
     document.querySelectorAll('a[href]').forEach((link) => {
       const url = new URL(link.href, window.location.href);
-      if (!samePage(url) || !url.hash || link.hasAttribute('download')) return;
+      if (!samePage(url) || url.search !== window.location.search || !url.hash || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
       link.addEventListener('click', (event) => {
         if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
         let id;
@@ -61,6 +136,7 @@
         }
         target.focus({ preventScroll: true });
         target.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
+        highlightDestination(target);
         if (window.location.hash !== url.hash) history.pushState(null, '', url.hash);
       });
     });
@@ -73,6 +149,10 @@
       return section ? { link, section } : null;
     }).filter(Boolean);
     let framePending = false;
+    const progress = document.createElement('div');
+    progress.className = 'reading-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.append(progress);
     let backToTop = document.getElementById('backToTop');
     if (!backToTop) {
       backToTop = document.createElement('button');
@@ -98,6 +178,9 @@
     function updateScrollState() {
       framePending = false;
       backToTop.classList.toggle('show', window.scrollY > 550);
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const completion = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+      progress.style.setProperty('--reading-progress', completion.toFixed(4));
       const threshold = (header?.getBoundingClientRect().height || 90) + 100;
       const groups = new Map();
       sectionLinks.forEach((entry) => {
@@ -174,8 +257,12 @@
           projects.forEach((project) => {
             const categories = project.dataset.projectCategory.split(/[\s,]+/);
             const matches = value === 'all' || categories.includes(value);
+            const wasHidden = project.hidden;
             project.hidden = !matches;
-            if (matches) count++;
+            if (matches) {
+              if (wasHidden) enter(project, Math.min(count * 40, 120));
+              count++;
+            }
           });
           filters.forEach((filter) => filter.setAttribute('aria-pressed', String(filter === button)));
           const text = `${count} ${count === 1 ? 'project' : 'projects'} shown${value === 'all' ? '' : ` in ${button.textContent.trim()}`}.`;
@@ -185,6 +272,37 @@
         });
       });
     }
+
+    // Enhance native disclosures and the existing research tabs without owning
+    // their behavior or delaying interactions.
+    document.addEventListener('toggle', (event) => {
+      const disclosure = event.target;
+      if (!disclosure.matches?.('details[open]')) return;
+      [...disclosure.children].filter((child) => child.tagName !== 'SUMMARY').forEach((child, index) => enter(child, Math.min(index * 30, 90)));
+    }, true);
+
+    const researchPanels = document.querySelectorAll('.research-panel');
+    if (researchPanels.length && 'MutationObserver' in window) {
+      const panelObserver = new MutationObserver((changes) => {
+        const revealed = new Set(changes.map((change) => change.target).filter((panel) => !panel.hidden));
+        revealed.forEach((panel) => enter(panel));
+        updateScrollState();
+      });
+      researchPanels.forEach((panel) => panelObserver.observe(panel, { attributes: true, attributeFilter: ['hidden'] }));
+    }
+    const resultChart = document.querySelector('.result-chart');
+    if (resultChart && 'MutationObserver' in window) {
+      const chartObserver = new MutationObserver(() => {
+        resultChart.querySelectorAll('.result-chart-bar').forEach((bar, index) => {
+          animateMotion(bar, [
+            { transform: 'scaleX(.05)', transformOrigin: 'left', opacity: .65 },
+            { transform: 'scaleX(1)', transformOrigin: 'left', opacity: 1 }
+          ], { duration: 360, delay: Math.min(index * 25, 125) });
+        });
+      });
+      chartObserver.observe(resultChart, { childList: true });
+    }
+    observeEntrances();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });

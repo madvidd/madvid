@@ -15,4 +15,8 @@ The Research page presents **Uncertainty-Aware Attention, Geometry and State-Spa
 
 The site is static HTML, CSS and JavaScript, hosted by GitHub Pages. Research tables, project cards and navigation remain available without JavaScript. JavaScript adds an accessible mobile menu, project filters, result tabs/charts and copy controls. Respect reduced-motion preferences and preserve natural image proportions when extending the design.
 
+Motion enhancements include progressive page and section transitions, card and text hover highlights, keyboard-focus feedback and a reading-progress indicator. Animations respect reduced-motion settings and never make content depend on an animation completing.
+
+The Media page brings together credential records, visible full-resolution image galleries, public links and attributed reposts from the owner's LinkedIn profile. Existing image redactions are preserved. Third-party posts remain attributed to their original authors; the IGNITE video uses LinkedIn's official embed with an original-post fallback link. Keep source images uncropped and all gallery items visible without opening a disclosure.
+
 Keep visible update timestamps off the pages. Modification dates belong only in structured metadata and the sitemap.
